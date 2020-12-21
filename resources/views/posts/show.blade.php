@@ -11,13 +11,13 @@
                 </div>
                 <hr>
                 <div>
-                    <p>Tuto lekci si můžete stáhnout
-                        <a href="/storage/file_upload/{{$post->file_upload}}" class="contactemail">ZDE ({{ $post->file_upload }})</a>
+                    <p>Pro stáhnutí klikni na
+                        <a href="/storage/file_upload/{{$post->file_upload}}" class="contactemail"> {{ $post->file_upload }}</a>
                         @if (!empty($post['file_upload1']))
-                        ,dále <a href="/storage/file_upload/{{$post->file_upload1}}" class="contactemail">ZDE ({{ $post->file_upload1 }})</a>
+                        ,dále <a href="/storage/file_upload/{{$post->file_upload1}}" class="contactemail"> {{ $post->file_upload1 }}</a>
                         @endif
                         @if (!empty($post['file_upload2']))
-                        a <a href="/storage/file_upload/{{$post->file_upload2}}" class="contactemail">ZDE ({{ $post->file_upload2 }})</a>
+                        a <a href="/storage/file_upload/{{$post->file_upload2}}" class="contactemail">{{ $post->file_upload2 }}</a>
                         @endif                 
                     </p>
                 </div>

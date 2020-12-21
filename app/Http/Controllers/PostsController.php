@@ -62,7 +62,7 @@ class PostsController extends Controller
             //Get just extension
             $extension = $request->file('file_upload')->getClientOriginalExtension();
             //File name to store
-            $fileNameToStore = $fileName . '.' . time() . '.' . $extension;
+            $fileNameToStore = $fileName . '.' . rand(1, 999) . '.' . $extension;
             //Upload file
             $path = $request->file('file_upload')->storeAs('public/file_upload', $fileNameToStore);
         } else{
@@ -78,7 +78,7 @@ class PostsController extends Controller
             //Get just extension
             $extension1 = $request->file('file_upload1')->getClientOriginalExtension();
             //File name to store
-            $fileNameToStore1 = $fileName1 . '.' . time() . '.' . $extension1;
+            $fileNameToStore1 = $fileName1 . '.' . rand(1, 999) . '.' . $extension1;
             //Upload file
             $path1 = $request->file('file_upload1')->storeAs('public/file_upload', $fileNameToStore1);
         } else{
@@ -94,7 +94,7 @@ class PostsController extends Controller
             //Get just extension
             $extension2 = $request->file('file_upload2')->getClientOriginalExtension();
             //File name to store
-            $fileNameToStore2 = $fileName2 . '.' . time() . '.' . $extension2;
+            $fileNameToStore2 = $fileName2 . '.' . rand(1, 999) . '.' . $extension2;
             //Upload file
             $path2 = $request->file('file_upload2')->storeAs('public/file_upload', $fileNameToStore2);
         } else{
