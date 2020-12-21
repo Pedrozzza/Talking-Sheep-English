@@ -16,6 +16,12 @@
             <div class="form-group font-weight-bold">
                 {{Form::file('file_upload')}}
             </div>
+            <div class="form-group font-weight-bold">
+                {{Form::file('file_upload1')}}
+            </div>
+            <div class="form-group font-weight-bold">
+                {{Form::file('file_upload2')}}
+            </div>
             <div>
                 {{Form::label('color', 'Barva pozadí')}}
                 {{Form::select('color', [

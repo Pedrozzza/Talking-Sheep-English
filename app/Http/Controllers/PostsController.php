@@ -48,9 +48,11 @@ class PostsController extends Controller
             'title' => 'required',
             'body' => 'required',
             'file_upload' => 'nullable',
+            'file_upload1' => 'nullable',
+            'file_upload2' => 'nullable',
         ]);
 
-        //handle file upload
+        //handle file upload 1
         if($request->hasFile('file_upload'))
         {
             //Get file with extension
@@ -67,6 +69,38 @@ class PostsController extends Controller
             $fileNameToStore = '';
         }
 
+        if($request->hasFile('file_upload1'))
+        {
+            //Get file with extension
+            $fileNameWithExt1 = $request->file('file_upload1')->getClientOriginalName();
+            //Get just file name
+            $fileName1 = pathinfo($fileNameWithExt1, PATHINFO_FILENAME);
+            //Get just extension
+            $extension1 = $request->file('file_upload1')->getClientOriginalExtension();
+            //File name to store
+            $fileNameToStore1 = $fileName1 . '.' . time() . '.' . $extension1;
+            //Upload file
+            $path1 = $request->file('file_upload1')->storeAs('public/file_upload', $fileNameToStore1);
+        } else{
+            $fileNameToStore1 = '';
+        }
+
+        if($request->hasFile('file_upload2'))
+        {
+            //Get file with extension
+            $fileNameWithExt2 = $request->file('file_upload2')->getClientOriginalName();
+            //Get just file name
+            $fileName2 = pathinfo($fileNameWithExt2, PATHINFO_FILENAME);
+            //Get just extension
+            $extension2 = $request->file('file_upload2')->getClientOriginalExtension();
+            //File name to store
+            $fileNameToStore2 = $fileName2 . '.' . time() . '.' . $extension2;
+            //Upload file
+            $path2 = $request->file('file_upload2')->storeAs('public/file_upload', $fileNameToStore2);
+        } else{
+            $fileNameToStore2 = '';
+        }
+
         //create a post
         $post = new Post;
         $post->title = $request->input('title');
@@ -74,6 +108,8 @@ class PostsController extends Controller
         $post->folder_id = $request->input('folder_id');
         $post->user_id = auth()->user()->id;
         $post->file_upload = $fileNameToStore;
+        $post->file_upload1 = $fileNameToStore1;
+        $post->file_upload2 = $fileNameToStore2;
         $post->color = $request->input('color');
         $post->save();
 

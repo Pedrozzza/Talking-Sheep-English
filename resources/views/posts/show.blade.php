@@ -11,10 +11,17 @@
                 </div>
                 <hr>
                 <div>
-                    <p>Tuto lekci si můžete stáhnout <a href="/storage/file_upload/{{$post->file_upload}}" class="contactemail">ZDE</a></p>
+                    <p>Tuto lekci si můžete stáhnout
+                        <a href="/storage/file_upload/{{$post->file_upload}}" class="contactemail">ZDE ({{ $post->file_upload }})</a>
+                        @if (!empty($post['file_upload1']))
+                        ,dále <a href="/storage/file_upload/{{$post->file_upload1}}" class="contactemail">ZDE ({{ $post->file_upload1 }})</a>
+                        @endif
+                        @if (!empty($post['file_upload2']))
+                        a <a href="/storage/file_upload/{{$post->file_upload2}}" class="contactemail">ZDE ({{ $post->file_upload2 }})</a>
+                        @endif                 
+                    </p>
                 </div>
                 <small>Vytvořeno:{{$post->created_at}}</small>
-
             </div>
 
             @if(Auth()->user()->id == 1)
