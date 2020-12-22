@@ -64,7 +64,9 @@ class PostsController extends Controller
             //File name to store
             $fileNameToStore = $fileName . '.' . rand(1, 999) . '.' . $extension;
             //Upload file
-            $path = $request->file('file_upload')->storeAs('public/file_upload', $fileNameToStore);
+            $way = public_path('/obrazky');
+
+            $path1 = $request->file('file_upload')->move($way, $fileNameToStore);
         } else{
             $fileNameToStore = '';
         }
@@ -80,7 +82,9 @@ class PostsController extends Controller
             //File name to store
             $fileNameToStore1 = $fileName1 . '.' . rand(1, 999) . '.' . $extension1;
             //Upload file
-            $path1 = $request->file('file_upload1')->storeAs('public/file_upload', $fileNameToStore1);
+            $way = public_path('/obrazky');
+
+            $path1 = $request->file('file_upload1')->move($way, $fileNameToStore1);
         } else{
             $fileNameToStore1 = '';
         }
@@ -96,7 +100,9 @@ class PostsController extends Controller
             //File name to store
             $fileNameToStore2 = $fileName2 . '.' . rand(1, 999) . '.' . $extension2;
             //Upload file
-            $path2 = $request->file('file_upload2')->storeAs('public/file_upload', $fileNameToStore2);
+            $way = public_path('/obrazky');
+
+            $path2 = $request->file('file_upload2')->move($way , $fileNameToStore2);
         } else{
             $fileNameToStore2 = '';
         }
