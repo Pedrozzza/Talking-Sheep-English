@@ -72,7 +72,7 @@ body {
   line-height: 1.6;
   color: #212529;
   text-align: left;
-  background-color: #f8fafc;
+  background-color: white;
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -511,7 +511,7 @@ mark,
 
 .img-thumbnail {
   padding: 0.25rem;
-  background-color: #f8fafc;
+  background-color: white;
   border: 1px solid #dee2e6;
   border-radius: 0.25rem;
   max-width: 100%;
@@ -4240,15 +4240,15 @@ input[type=button].btn-block {
 }
 
 .custom-range:focus::-webkit-slider-thumb {
-  box-shadow: 0 0 0 1px #f8fafc, 0 0 0 0.2rem rgba(52, 144, 220, 0.25);
+  box-shadow: 0 0 0 1px white, 0 0 0 0.2rem rgba(52, 144, 220, 0.25);
 }
 
 .custom-range:focus::-moz-range-thumb {
-  box-shadow: 0 0 0 1px #f8fafc, 0 0 0 0.2rem rgba(52, 144, 220, 0.25);
+  box-shadow: 0 0 0 1px white, 0 0 0 0.2rem rgba(52, 144, 220, 0.25);
 }
 
 .custom-range:focus::-ms-thumb {
-  box-shadow: 0 0 0 1px #f8fafc, 0 0 0 0.2rem rgba(52, 144, 220, 0.25);
+  box-shadow: 0 0 0 1px white, 0 0 0 0.2rem rgba(52, 144, 220, 0.25);
 }
 
 .custom-range::-moz-focus-outer {
@@ -4454,8 +4454,8 @@ input[type=button].btn-block {
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-item.show .nav-link {
   color: #495057;
-  background-color: #f8fafc;
-  border-color: #dee2e6 #dee2e6 #f8fafc;
+  background-color: white;
+  border-color: #dee2e6 #dee2e6 white;
 }
 
 .nav-tabs .dropdown-menu {
@@ -10935,16 +10935,19 @@ h1 {
 h2 {
   color: #e3342f;
   font-weight: bold;
+  text-shadow: 2px 2px 4px #f4433636;
 }
 
 h3 {
   color: #e3342f;
+  text-shadow: 2px 2px 4px #f4433699;
 }
 
 h4 {
   color: black;
   font-size: 1.5rem;
   font-weight: bold;
+  text-shadow: 2px 2px 4px #928989d8;
 }
 
 h5 {
@@ -10973,7 +10976,7 @@ h5 {
 }
 
 .bg-red {
-  background-color: #e3342f;
+  background: linear-gradient(to bottom right, #cc0000 8%, #ff5050 90%);
 }
 
 .jumbotron {
@@ -11037,8 +11040,9 @@ h5 {
 }
 
 #contact {
-  background-color: #043055;
+  background: linear-gradient(to bottom right, #0066cc 8%, #0099ff 90%);
   padding: 3rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .cardcontacts {
@@ -11047,7 +11051,7 @@ h5 {
 
 .contactfont {
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
 .contactemail {
@@ -11057,7 +11061,8 @@ h5 {
 }
 
 .footer {
-  background-color: #e3342f;
+  background: linear-gradient(to bottom right, #cc0000 8%, #ff5050 90%);
+  text-shadow: 2px 2px 4px #000000;
   text-align: center;
   font-weight: bold;
   color: white;
@@ -11082,21 +11087,24 @@ h5 {
 }
 
 .nav-itemleft {
-  background-color: #3b9ceb;
+  background: linear-gradient(to bottom right, #0066cc 8%, #0099ff 90%);
   border-radius: 10px;
   margin-left: 1rem;
   padding: 0.4rem;
   text-align: center;
+  text-shadow: 2px 2px 4px #000000;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 @media (max-width: 700px) {
   .nav-itemleft {
-    margin-bottom: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 0.3rem;
   }
 }
 
 .nav-itemleft:hover {
-  background-color: #e1eaf3;
+  background: linear-gradient(to bottom right, #0066cc 2%, #0099ff 20%);
 }
 
 .myButton {
@@ -11141,5 +11149,114 @@ h5 {
     margin-right: 1.5rem;
     margin-bottom: 1rem;
   }
+}
+
+.btn-1 {
+  background: linear-gradient(to bottom right, #cc0000 8%, #ff5050 90%);
+  border-radius: 30px;
+  padding: 1rem 1.5rem;
+  text-shadow: 2px 2px 4px #000000;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.btn-1:hover {
+  background: linear-gradient(to bottom right, #cc0000 4%, #ff5050 50%);
+}
+
+.btn-2 {
+  background: linear-gradient(to top right, #3366ff 8%, #33ccff 97%);
+  border-radius: 30px;
+  padding: 0.5rem 1.5rem;
+  text-shadow: 2px 2px 4px #000000;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.btn-2:hover {
+  background: linear-gradient(to bottom right, #0066cc 2%, #0099ff 20%);
+}
+
+.btn-3 {
+  background: black;
+  border-radius: 30px;
+  padding: 0.3rem 1.5rem;
+  text-shadow: 2px 2px 4px #000000;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  color: white;
+}
+
+.btn-3:hover {
+  opacity: 0.7;
+}
+
+.btn-back {
+  background: linear-gradient(to bottom right, #cc0000 8%, #ff5050 90%);
+  border-radius: 30px;
+  padding: 0.8rem;
+  text-shadow: 2px 2px 4px #000000;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.btn-back:hover {
+  background: linear-gradient(to bottom right, #cc0000 4%, #ff5050 50%);
+}
+
+.btn-primary {
+  background: linear-gradient(to top right, #3366ff 8%, #33ccff 97%);
+  border-radius: 30px;
+  padding: 0.5rem 1.5rem;
+  text-shadow: 2px 2px 4px #000000;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(to bottom right, #0066cc 2%, #0099ff 20%);
+}
+
+.navbar-brand {
+  text-shadow: 2px 2px 4px #000000;
+}
+
+.nav-link {
+  text-shadow: 2px 2px 4px #000000;
+}
+
+.forms {
+  background: linear-gradient(to bottom, #378de5 5%, #79bbff 100%);
+  color: white;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+.lesson {
+  margin-top: 1rem;
+  border-radius: 30px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  color: #0c0101;
+  padding-bottom: 0.5rem;
+  padding-top: 0.5rem;
+}
+
+.popisek {
+  text-shadow: 2px 2px 2px #607d8bc4;
+}
+
+.obal {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 30px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin: 1rem;
+}
+
+.shadow {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.box-shad {
+  box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+}
+
+.box-inner {
+  box-shadow: inset -2px 12px 10px -10px #9e9e9eeb;
 }
 

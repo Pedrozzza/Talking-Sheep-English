@@ -7,15 +7,15 @@
             <div class="row">           
                 <div class="mx-auto">
                     <img src="{{ url('images/logo4.png')}}" alt="english" class="welcomeimage">
-                    <h4 class="mt-2 p-4">Soukromě, v malý skupince, živě i po skypu. Na cesty, na zkoušky, k maturitě i do baru.</h4>
-                    <a href="/folders" class="btn btn-danger mt-3" style="font-weight: bold">Naučím tě English, Chceš?</a>
+                    <h4 class="mt-2 mb-4 p-4">Soukromě, v malý skupince, živě i po skypu. Na cesty, na zkoušky, k maturitě i do baru</h4>
+                    <a href="/folders" class="btn-1">Naučím tě English, Chceš?</a>
                 </div>
             </div>
         </div>
     </section>
     <!-- About section -->
     <section id="about">
-        <div class="jumbotron">
+        <div class="jumbotron box-shad">
             <div class="container d-flex justify-content-center">
                 <div class="row">
                     <div>
@@ -25,11 +25,11 @@
                                 Bude to jiné, bude to nové, bude to trhlé a neotřelé. Bude to sranda a navíc si z toho budeš hodně věcí pamatovat! Učíme se, hrajeme hry, a kombinujeme bláznivé věci s neuvěřitelnými, protože čím větší šílenost, tím pro mozek zapamatovatelnější <i class="em em-full_moon_with_face" aria-role="presentation" aria-label="FULL MOON WITH FACE"></i>
                             </p>
                         <div class="d-flex justify-content-center">
-                            <button class="myButton mt-3 mb-5" style="font-weight: bold" data-toggle="collapse" data-target="#omne">Rozklikni si o mně více</button>
+                            <a href="" class="btn-2 mt-3 mb-5" style="font-weight: bold" data-toggle="collapse" data-target="#omne">Rozklikni si o mně více</a>
                         </div>
                         <div id="omne" class="collapse">
                             <p class="font-weight-bold">
-                            <img src="{{ url('images/about.jpg')}}" alt="teacher" class="aboutimage">
+                            <img src="{{ url('images/about.jpg')}}" alt="teacher" class="aboutimage shadow">
                                 Nejdříve jsem 2 roky žila v Anglii, konrétně v Lake District. Pak jsem si střihla ještě rok na Novým Zelí. V&nbspmezičase jsem si ze Zelíčka odskočila na měsíc na Filipíny, a později, po cestě zpět domů jsem to vzala ještě přes pár metropolitních zastávek včetně jednoho měsíce ve Vietnamu.</br>
                                 Cestování je úžasná věc, a strávit někde v zahraničí delší dobu než jen víkendovou opalovačku můžu jedině doporučit. Je neuvěřitelně obohacující zkusit si v cizí zemi chvíli žít, nebo i pracovat. Spousta lidí to ale neudělá, i když je to láká, a častou výmluvou je “Neumím anglicky.”</br></br>
                                 Prozradím ti tajemství. Taky jsem neuměla anglicky. Na základce mě angičtina nebavila a nosila jsem domů od dvojek až po čtverce. Na střední jsem stále ještě učení se jazyku moc pozornosti nevěnovala, protože jsem měla pocit, že mi to stejně nikdy nepůjde nějak vyjímečně, a že to nebudu stejně nikdy potřebovat. Představovala jsem si, že na to, aby člověk uměl mluvit dobře cizím jazykem se musí prostě narodit extra chytrej, nebo mít nějaký superschopnosti komiksových hrdinů. Ani ve snu mě tehdy nenapadlo, že budu jednou celkem bez obav cestovat po celým světě, žít a pracovat v&nbspzahraničí, natož že bych někdy mohla angličtinu učit.</br></br>
@@ -94,16 +94,16 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4 mb-3 mb-md-0">
-                    <div class="card cardcontacts py-4 h-100">
+                    <div class="card box-shad cardcontacts py-4 h-100">
                         <div class="card-body text-center">
                             <h2 class="text-uppercase m-0">navštiv náš</h2>
                             <hr class="my-4" />
-                            <div><img class="mr-3" src="images/fb.jpg" alt="fb" style="height: 30px; width: 30px"><a href="https://www.facebook.com/talking.sheep.english/" target="_blank" class="contactemail">facebook</a></div>
+                            <div><img class="mr-3 shadow" src="images/fb.jpg" alt="fb" style="height: 30px; width: 30px"><a href="https://www.facebook.com/talking.sheep.english/" target="_blank" class="contactemail">facebook</a></div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4 mb-3 mb-md-0">
-                    <div class="card cardcontacts py-4 h-100">
+                    <div class="card box-shad cardcontacts py-4 h-100">
                         <div class="card-body text-center">
                             <h2 class="text-uppercase m-0">e-mail</h2>
                             <hr class="my-4" />
@@ -112,7 +112,7 @@
                     </div>
                 </div>
                 <div class="col-md-4 mb-3 mb-md-0">
-                    <div class="card cardcontacts py-4 h-100">
+                    <div class="card box-shad cardcontacts py-4 h-100">
                         <div class="card-body text-center">
                             <h2 class="text-uppercase m-0">Telefon</h2>
                             <hr class="my-4" />
@@ -122,5 +122,5 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section>  
 @endsection

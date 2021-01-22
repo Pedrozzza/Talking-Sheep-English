@@ -1,11 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<div class="container my-auto">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card" style="margin-top: 40px; margin-bottom: 40px">
-                <div class="card-header text-center font-weight-bold" style="color:red; background-color:#ffcccc">VSTUP DO UČEBNY PRO STUDENTY TALKING SHEEP ENGLISH</div>
+            <div class="card box-shad">
+                <div class="card-header text-center font-weight-bold forms">VSTUP DO UČEBNY PRO STUDENTY TALKING SHEEP ENGLISH</div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">

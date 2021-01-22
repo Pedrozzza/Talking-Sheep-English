@@ -20,7 +20,7 @@ class FoldersController extends Controller
      */
     public function index()
     {
-        $folders = Folder::orderBy('created_at', 'DESC')->paginate(10);
+        $folders = Folder::orderBy('title')->paginate(10);
         return view('folders.index')->with('folders', $folders);
     }
 
@@ -71,7 +71,7 @@ class FoldersController extends Controller
     public function show($id)
     {
         $folder = Folder::find($id);
-        $posts = Post::orderBy('created_at', 'DESC')->whereIn('folder_id', $folder)->paginate(10);
+        $posts = Post::orderBy('title')->whereIn('folder_id', $folder)->paginate(50);
         return view('folders.show')->with(compact('folder','posts'));
     }
 

@@ -2,12 +2,13 @@
 
 @section('content')
     <div class="container">
-        <div style="margin-top: 90px;margin-bottom: 50px">
-            <h2 class="d-flex justify-content-center">Editovat Lekci</h2>
-            <a href="/folders/"{{$post->folder_id}} class="btn btn-danger mb-3">Jít zpět</a>
+        <div style="margin-top: 60px;margin-bottom: 50px">
+        <a href="/folders/"{{$post->folder_id}} class="btn-back mb-3">Jít zpět</a>
+            <h2 class="d-flex justify-content-center mt-5">Editovat Lekci</h2>
+            
 
             {!! Form::open(['action' => ['App\Http\Controllers\PostsController@update', $post->id], 'method' => 'PUT', 'enctype' => 'multipart/form-data']) !!}
-            <div class="form-group font-weight-bold">
+            <div class="form-group font-weight-bold mt-5">
                 {{Form::label('title', 'Titulek')}}
                 {{Form::text('title', $post->title, ['class' => 'form-control', 'placeholder' => 'Title'])}}
             </div>
