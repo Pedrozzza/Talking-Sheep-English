@@ -15,7 +15,7 @@
                 @if(Auth()->user()->id == 1)
                     <a href="/folders/{{$folder->id}}/edit" class="btn-2 mt-3 float-right ml-3">Editovat kategorii</a>
 
-                    {!! Form::open(['action' => ['App\Http\Controllers\FoldersController@destroy', $folder->id], 'method' => 'DELETE', 'class' => 'float-right']) !!}
+                    {!! Form::open(['action' => ['App\Http\Controllers\FoldersController@destroy', $folder->id], 'method' => 'DELETE', 'class' => 'float-right', 'onclick'=> 'return confirm("Opravdu smazat? Smazáním kategorie se smažou všechny lekce v ní obsažené. Akce je nenávratná")']) !!}
                     {{ Form::submit('Smazat kategorii', ['class' => 'btn-3 float-right mt-3']) }}
                     {!! Form::close() !!}
                 @endif

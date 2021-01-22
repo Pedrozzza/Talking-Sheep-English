@@ -26,7 +26,7 @@
             @if(Auth()->user()->id == 1)
                 <a href="/posts/{{$post->id}}/edit" class="btn-2 mt-3 float-right ml-3">Editovat lekci</a>
 
-                {!! Form::open(['action' => ['App\Http\Controllers\PostsController@destroy', $post->id], 'method' => 'DELETE', 'class' => 'float-right']) !!}
+                {!! Form::open(['action' => ['App\Http\Controllers\PostsController@destroy', $post->id], 'method' => 'DELETE', 'class' => 'float-right', 'onclick'=> 'return confirm("Opravdu smazat? Akce je nenávratná")']) !!}
                 {{ Form::submit('Smazat lekci', ['class' => 'btn-3 float-right mt-3']) }}
                 {!! Form::close() !!}
             @endif
