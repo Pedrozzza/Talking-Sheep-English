@@ -12,12 +12,12 @@
                 <hr>
                 <div>
                     <p>Pro stáhnutí klikni na
-                        <a href="/obrazky/{{$post->file_upload}}" class="contactemail"> {{ $post->file_upload }}</a>
+                        <a href="/storage/file_upload/{{$post->file_upload}}" class="contactemail"> {{ $post->file_upload }}</a>
                         @if (!empty($post['file_upload1']))
-                        ,dále <a href="/obrazky/{{$post->file_upload1}}" class="contactemail"> {{ $post->file_upload1 }}</a>
+                        ,dále <a href="/storage/file_upload/{{$post->file_upload1}}" class="contactemail"> {{ $post->file_upload1 }}</a>
                         @endif
                         @if (!empty($post['file_upload2']))
-                        a <a href="/obrazky/{{$post->file_upload2}}" class="contactemail">{{ $post->file_upload2 }}</a>
+                        a <a href="/storage/file_upload/{{$post->file_upload2}}" class="contactemail">{{ $post->file_upload2 }}</a>
                         @endif                 
                     </p>
                 </div>               
@@ -33,3 +33,4 @@
         </div>
     </div>
 @endsection
+
