@@ -16,7 +16,6 @@
             <div>
                 {{Form::label('color', 'Barva pozadí')}}
                 {{Form::select('color', [
-                    '#ffffff' => 'bílá',
                     '#ff6666' => 'červená',
                     '#80aaff' => 'modrá',
                     '#80ff80' => 'zelená',

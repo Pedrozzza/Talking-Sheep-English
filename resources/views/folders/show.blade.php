@@ -4,7 +4,7 @@
     <section id="category">
         <div class="container">
             <div class="">
-                <a href="/folders" class="btn-back">Jít zpět</a>
+                <a href="/folders" class="btn-back">Go back</a>
                     <h2 class="mt-5 d-flex justify-content-center">{{$folder->title}}</h2>
                 <div class="p-3 mt-3">
                     <div class="obal">

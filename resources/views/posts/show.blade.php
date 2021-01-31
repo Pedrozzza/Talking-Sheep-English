@@ -3,7 +3,7 @@
 @section('content')
     <div class="container">
         <div style="margin-top: 130px;margin-bottom: 130px">
-            <a href="/folders/{{$post->folder_id}}" class="btn-1 mb-4">Jít zpět</a>
+            <a href="/folders/{{$post->folder_id}}" class="btn-1 mb-4">Go back</a>
             <h2 class="mb-4 d-flex justify-content-center">{{$post->title}}</h2>
             <div class="p-3 mt-3">
                 <div class="obal">

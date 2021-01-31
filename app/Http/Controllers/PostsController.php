@@ -141,6 +141,9 @@ class PostsController extends Controller
         return view('posts.edit')->with('post', $post);
     }
 
+
+
+
     /**
      * Update the specified resource in storage.
      *
@@ -154,6 +157,8 @@ class PostsController extends Controller
             'title' => 'required',
             'body' => 'required',
             'file_upload' => 'nullable',
+            'file_upload1' => 'nullable',
+            'file_upload2' => 'nullable',
         ]);
         //handle file upload
         if($request->hasFile('file_upload'))
@@ -170,6 +175,38 @@ class PostsController extends Controller
             $path = $request->file('file_upload')->storeAs('public/file_upload', $fileNameToStore);
         }
 
+        if($request->hasFile('file_upload1'))
+        {
+            //Get file with extension
+            $fileNameWithExt1 = $request->file('file_upload1')->getClientOriginalName();
+            //Get just file name
+            $fileName1 = pathinfo($fileNameWithExt1, PATHINFO_FILENAME);
+            //Get just extension
+            $extension1 = $request->file('file_upload1')->getClientOriginalExtension();
+            //File name to store
+            $fileNameToStore1 = $fileName1 . '.' . rand(1, 999) . '.' . $extension1;
+            //Upload file
+            $path = $request->file('file_upload1')->storeAs('public/file_upload', $fileNameToStore1);
+        } else{
+            $fileNameToStore1 = '';
+        }
+
+        if($request->hasFile('file_upload2'))
+        {
+            //Get file with extension
+            $fileNameWithExt2 = $request->file('file_upload2')->getClientOriginalName();
+            //Get just file name
+            $fileName2 = pathinfo($fileNameWithExt2, PATHINFO_FILENAME);
+            //Get just extension
+            $extension2 = $request->file('file_upload2')->getClientOriginalExtension();
+            //File name to store
+            $fileNameToStore2 = $fileName2 . '.' . rand(1, 999) . '.' . $extension2;
+            //Upload file
+            $path = $request->file('file_upload2')->storeAs('public/file_upload', $fileNameToStore2);
+        } else{
+            $fileNameToStore2 = '';
+        }
+
         //create post
         $post = Post::find($id);
         $post->title = $request->input('title');
@@ -177,6 +214,14 @@ class PostsController extends Controller
         if($request->hasFile('file_upload')){
             Storage::delete('public/file_upload/' . $post->file_upload);
             $post->file_upload = $fileNameToStore;
+        }
+        if($request->hasFile('file_upload1')){
+            Storage::delete('public/file_upload/' . $post->file_upload1);
+            $post->file_upload1 = $fileNameToStore1;
+        }
+        if($request->hasFile('file_upload2')){
+            Storage::delete('public/file_upload/' . $post->file_upload2);
+            $post->file_upload2 = $fileNameToStore2;
         }
         $post->color = $request->input('color');
         $post->save();

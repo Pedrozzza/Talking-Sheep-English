@@ -3,7 +3,7 @@
 @section('content')
     <div class="container">
         <div style="margin-top: 50px;margin-bottom: 130px">
-        <a href="/folders" class="btn-back">Jít zpět</a>
+        <a href="/folders" class="btn-back">Go back</a>
             <h2 class="d-flex justify-content-center mt-5">Editovat kategorii</h2>
             {!! Form::open(['action' => ['App\Http\Controllers\FoldersController@update', $folder->id], 'method' => 'PUT']) !!}
             <div class="form-group font-weight-bold mt-5">
@@ -16,8 +16,7 @@
             </div>
             <div>
                 {{Form::label('color', 'Barva pozadí')}}
-                {{Form::select('color', [
-                    '#ffffff' => 'bílá',
+                {{Form::select('color', [$folder->color => $folder->color,
                     '#ff6666' => 'červená',
                     '#80aaff' => 'modrá',
                     '#80ff80' => 'zelená',
