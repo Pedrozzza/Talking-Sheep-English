@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-md navbar-light shadow-sm navbarwhitebold bg-red fixed-top">
-    <div class="container">
+    <div class="container-fluid">
         <img src="{{ url('logo/Sheepinflag2.png')}}" class="mr-3" style="height: 40px; width: 40px">
         <a class="navbar-brand" href="{{ url('/#') }}">
             {{ config('app.name', 'Laravel') }}
