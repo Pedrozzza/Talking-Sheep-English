@@ -10,11 +10,8 @@ class Post extends Model
 {
     use HasFactory;
 
-    //Table name
     protected $table = 'posts';
-    //Primary Key
     public $primaryKey = 'id';
-    //Timestamps
     public $timestamps = true;
 
     public function folders(){

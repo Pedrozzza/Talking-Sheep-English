@@ -3,7 +3,7 @@
 @section('content')
     <div class="container">
         <div style="margin-top: 60px;margin-bottom: 50px">
-        <a href="/posts/{{$post->id}}" class="btn-back mb-3">Go back</a>
+        <a href="/folders/"{{$post->folder_id}} class="btn-back mb-3">Go back</a>
             <h2 class="d-flex justify-content-center mt-5">Editovat Lekci</h2>
             
 
@@ -18,15 +18,12 @@
             </div>
             <div class="form-group font-weight-bold">
                 {{Form::file('file_upload')}}
-                Předchozí soubor: {{$post->file_upload}}
             </div>
             <div class="form-group font-weight-bold">
                 {{Form::file('file_upload1')}}
-                Předchozí soubor: {{$post->file_upload1}}
             </div>
             <div class="form-group font-weight-bold">
                 {{Form::file('file_upload2')}}
-                Předchozí soubor: {{$post->file_upload2}}
             </div>
             <div>
                 {{Form::label('color', 'Barva pozadí')}}

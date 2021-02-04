@@ -52,7 +52,7 @@ class PostsController extends Controller
             'file_upload2' => 'nullable',
         ]);
 
-        //handle file upload 1
+        //handle file upload 
         if($request->hasFile('file_upload'))
         {
             //Get file with extension
@@ -71,31 +71,21 @@ class PostsController extends Controller
 
         if($request->hasFile('file_upload1'))
         {
-            //Get file with extension
             $fileNameWithExt1 = $request->file('file_upload1')->getClientOriginalName();
-            //Get just file name
             $fileName1 = pathinfo($fileNameWithExt1, PATHINFO_FILENAME);
-            //Get just extension
             $extension1 = $request->file('file_upload1')->getClientOriginalExtension();
-            //File name to store
             $fileNameToStore1 = $fileName1 . '.' . rand(1, 999) . '.' . $extension1;
-            //Upload file
             $path = $request->file('file_upload1')->storeAs('public/file_upload', $fileNameToStore1);
         } else{
             $fileNameToStore1 = '';
         }
 
         if($request->hasFile('file_upload2'))
-        {
-            //Get file with extension
+        { 
             $fileNameWithExt2 = $request->file('file_upload2')->getClientOriginalName();
-            //Get just file name
             $fileName2 = pathinfo($fileNameWithExt2, PATHINFO_FILENAME);
-            //Get just extension
             $extension2 = $request->file('file_upload2')->getClientOriginalExtension();
-            //File name to store
             $fileNameToStore2 = $fileName2 . '.' . rand(1, 999) . '.' . $extension2;
-            //Upload file
             $path = $request->file('file_upload2')->storeAs('public/file_upload', $fileNameToStore2);
         } else{
             $fileNameToStore2 = '';
@@ -160,32 +150,22 @@ class PostsController extends Controller
             'file_upload1' => 'nullable',
             'file_upload2' => 'nullable',
         ]);
-        //handle file upload
+        
         if($request->hasFile('file_upload'))
         {
-            //Get file with extension
             $fileNameWithExt = $request->file('file_upload')->getClientOriginalName();
-            //Get just file name
             $fileName = pathinfo($fileNameWithExt, PATHINFO_FILENAME);
-            //Get just extension
             $extension = $request->file('file_upload')->getClientOriginalExtension();
-            //File name to store
             $fileNameToStore = $fileName . '.' . time() . '.' . $extension;
-            //Upload file
             $path = $request->file('file_upload')->storeAs('public/file_upload', $fileNameToStore);
         }
 
         if($request->hasFile('file_upload1'))
         {
-            //Get file with extension
             $fileNameWithExt1 = $request->file('file_upload1')->getClientOriginalName();
-            //Get just file name
             $fileName1 = pathinfo($fileNameWithExt1, PATHINFO_FILENAME);
-            //Get just extension
             $extension1 = $request->file('file_upload1')->getClientOriginalExtension();
-            //File name to store
             $fileNameToStore1 = $fileName1 . '.' . rand(1, 999) . '.' . $extension1;
-            //Upload file
             $path = $request->file('file_upload1')->storeAs('public/file_upload', $fileNameToStore1);
         } else{
             $fileNameToStore1 = '';
@@ -193,15 +173,10 @@ class PostsController extends Controller
 
         if($request->hasFile('file_upload2'))
         {
-            //Get file with extension
             $fileNameWithExt2 = $request->file('file_upload2')->getClientOriginalName();
-            //Get just file name
             $fileName2 = pathinfo($fileNameWithExt2, PATHINFO_FILENAME);
-            //Get just extension
             $extension2 = $request->file('file_upload2')->getClientOriginalExtension();
-            //File name to store
             $fileNameToStore2 = $fileName2 . '.' . rand(1, 999) . '.' . $extension2;
-            //Upload file
             $path = $request->file('file_upload2')->storeAs('public/file_upload', $fileNameToStore2);
         } else{
             $fileNameToStore2 = '';
