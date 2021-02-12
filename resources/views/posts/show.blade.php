@@ -20,7 +20,11 @@
                         a <a href="/storage/file_upload/{{$post->file_upload2}}" class="contactemail">{{ $post->file_upload2 }}</a>
                         @endif                 
                     </p>
-                </div>               
+                </div>
+                <hr>
+                @if (!empty($post['file_homework']))
+                <p><a class="p-2 mr-2" style="color: red !important; font-weight: bold; border: 2px solid red; border-radius: 30px" href="/storage/file_upload/{{$post->file_homework}}">HOMEWORK</a><-   Translation for this lesson</p>               
+                @endif 
             </div>
 
             @if(Auth()->user()->id == 1)

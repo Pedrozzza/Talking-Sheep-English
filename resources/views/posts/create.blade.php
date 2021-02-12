@@ -13,6 +13,7 @@
                 {{Form::label('body', 'Obsah')}}
                 {{Form::textarea('body','', ['id'=>'article-ckeditor', 'class' => 'form-control', 'placeholder' => 'Text...'])}}
             </div>
+            <p style="font-weight:bold">Soubory k lekcím:</p>
             <div class="form-group font-weight-bold">
                 {{Form::file('file_upload')}}
             </div>
@@ -34,6 +35,10 @@
                     '#80ffe5' => 'tyrkysová',
                     '#c2d6d6' => 'šedá',
                     ])}}
+            </div>
+            <p style="font-weight:bold" class="pt-3">Soubor HOMEWORK:</p>
+            <div class="form-group font-weight-bold">
+                {{Form::file('file_homework')}}
             </div>
             {{Form::hidden('folder_id', $folder_id)}}
             {{Form::submit('Odeslat', ['class' => 'btn btn-primary'])}}

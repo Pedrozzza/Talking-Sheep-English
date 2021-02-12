@@ -50,6 +50,7 @@ class PostsController extends Controller
             'file_upload' => 'nullable',
             'file_upload1' => 'nullable',
             'file_upload2' => 'nullable',
+            'file_homework' => 'nullable',
         ]);
 
         //handle file upload 
@@ -91,6 +92,18 @@ class PostsController extends Controller
             $fileNameToStore2 = '';
         }
 
+        //homework file
+        if($request->hasFile('file_homework'))
+        {
+            $fileNameWithExtH = $request->file('file_homework')->getClientOriginalName();
+            $fileNameH = pathinfo($fileNameWithExtH, PATHINFO_FILENAME);
+            $extensionH = $request->file('file_homework')->getClientOriginalExtension();
+            $fileNameToStoreH = $fileNameH . '.' . rand(1, 999) . '.' . $extensionH;
+            $path = $request->file('file_homework')->storeAs('public/file_upload', $fileNameToStoreH);
+        } else{
+            $fileNameToStoreH = '';
+        }
+
         //create a post
         $post = new Post;
         $post->title = $request->input('title');
@@ -100,6 +113,7 @@ class PostsController extends Controller
         $post->file_upload = $fileNameToStore;
         $post->file_upload1 = $fileNameToStore1;
         $post->file_upload2 = $fileNameToStore2;
+        $post->file_homework = $fileNameToStoreH;
         $post->color = $request->input('color');
         $post->save();
 
@@ -149,6 +163,7 @@ class PostsController extends Controller
             'file_upload' => 'nullable',
             'file_upload1' => 'nullable',
             'file_upload2' => 'nullable',
+            'file_homework' => 'nullable',
         ]);
         
         if($request->hasFile('file_upload'))
@@ -182,6 +197,17 @@ class PostsController extends Controller
             $fileNameToStore2 = '';
         }
 
+        if($request->hasFile('file_homework'))
+        {
+            $fileNameWithExtH = $request->file('file_homework')->getClientOriginalName();
+            $fileNameH = pathinfo($fileNameWithExtH, PATHINFO_FILENAME);
+            $extensionH = $request->file('file_homework')->getClientOriginalExtension();
+            $fileNameToStoreH = $fileNameH . '.' . rand(1, 999) . '.' . $extensionH;
+            $path = $request->file('file_homework')->storeAs('public/file_upload', $fileNameToStoreH);
+        } else{
+            $fileNameToStoreH = '';
+        }
+
         //create post
         $post = Post::find($id);
         $post->title = $request->input('title');
@@ -197,6 +223,10 @@ class PostsController extends Controller
         if($request->hasFile('file_upload2')){
             Storage::delete('public/file_upload/' . $post->file_upload2);
             $post->file_upload2 = $fileNameToStore2;
+        }
+        if($request->hasFile('file_homework')){
+            Storage::delete('public/file_upload/' . $post->file_homework);
+            $post->file_homework = $fileNameToStoreH;
         }
         $post->color = $request->input('color');
         $post->save();
