@@ -14,7 +14,7 @@
                     <div class="lesson box-shad" style="background-color: {{ $folder->color }};">
                             <div class="obal">
                                 <h5 class="pt-3 d-flex justify-content-center popisek">{{ $folder->title }}</h5>
-                                <div class="pb-1 pr-3">{!! $folder->description !!}</div>
+                                
                             </div>                  
                         </div> 
                     </a>
