@@ -13,8 +13,11 @@
             <ul class="navbar-nav mr-auto border-left">
                 <a href="/#about" style="color: white!important;"><li class="nav-itemleft">Informace</li></a>
                 <a href="/#pricelist" style="color: white  !important;"><li class="nav-itemleft">Ceník</li></a>
-                <a href="/folders" style="color: white !important;"><li class="nav-itemleft">Studovna</li></a>
                 <a href="/#contact" style="color: white !important;"><li class="nav-itemleft">Kontakt</li></a>
+                <a href="/folders" style="color: white !important;"><li class="nav-itemleft">Studovna</li></a>              
+                @if(Auth()->user())
+                <a href="/folders" style="color: white !important;"><li class="nav-itemleft">Odevzdávárna</li></a> 
+                @endif 
             </ul>
 
             <!-- Right Side Of Navbar -->
@@ -37,8 +40,11 @@
                         <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                             {{ Auth::user()->name }}
                         </a>
-
+                        
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                            @if(Auth()->user()->id == 1)
+                                <a href="/homework" class="dropdown-item contactemail">Homework</a>
+                            @endif 
                             <a class="dropdown-item contactemail" href="{{ route('logout') }}"
                                onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
