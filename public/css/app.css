@@ -11088,6 +11088,7 @@ h5 {
 
 .nav-itemleft {
   background: linear-gradient(to bottom right, #0066cc 8%, #0099ff 90%);
+  color: white !important;
   border-radius: 10px;
   margin-left: 1rem;
   padding: 0.4rem;
@@ -11105,6 +11106,27 @@ h5 {
 
 .nav-itemleft:hover {
   background: linear-gradient(to bottom right, #0066cc 2%, #0099ff 20%);
+}
+
+.nav-item-submit {
+  background: white;
+  color: #c71818 !important;
+  border-radius: 10px;
+  margin-left: 1rem;
+  padding: 0.4rem;
+  text-align: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+@media (max-width: 700px) {
+  .nav-item-submit {
+    margin-top: 1rem;
+    margin-bottom: 0.3rem;
+  }
+}
+
+.nav-item-submit:hover {
+  background: linear-gradient(to bottom right, #fff3f5 2%, #f6e5e5 20%);
 }
 
 .myButton {
@@ -11263,5 +11285,52 @@ h5 {
 
 .box-inner {
   box-shadow: inset -2px 12px 10px -10px #9e9e9eeb;
+}
+
+#submit {
+  text-align: center;
+}
+
+.sheep_image {
+  border-radius: 30px;
+  width: 100%;
+  height: 275px;
+}
+
+.sheep_background {
+  margin-top: 0;
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+}
+
+@media (min-width: 1025px) {
+  .sheep_background {
+    background: linear-gradient(to bottom, rgba(255, 253, 253, 0) 0%, rgba(255, 254, 254, 0) 75%, #fffefe 100%), url(/images/sheep_background4.jpg?c376a9b96ac60808d9060ed067482465);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+  }
+}
+
+.submit_container {
+  width: auto;
+}
+
+@media (min-width: 768px) {
+  .submit_container {
+    width: 600px;
+  }
+}
+
+.submit_padding {
+  padding-top: 133px;
+}
+
+@media (min-width: 768px) {
+  .submit_padding {
+    padding-top: 325px;
+  }
 }
 

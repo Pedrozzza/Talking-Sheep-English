@@ -2,8 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PagesController;
-use App\Http\Controllers\FoldersController;
 use App\Http\Controllers\PostsController;
+use App\Http\Controllers\FoldersController;
+use App\Http\Controllers\SubmitsController;
+use App\Http\Controllers\HomeworksController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -26,4 +28,6 @@ Route::resource('/posts', \App\Http\Controllers\PostsController::class, ['except
 Route::get('/posts/create/{id}', [\App\Http\Controllers\PostsController::class, 'create']);
 Route::resource('/folders', \App\Http\Controllers\FoldersController::class);
 
+Route::get('/submit', [\App\Http\Controllers\SubmitsController::class, 'index']);
 
+Route::post('/homeworks', [\App\Http\Controllers\HomeworksController::class, 'store']);

@@ -11,12 +11,12 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <!-- Left Side Of Navbar -->
             <ul class="navbar-nav mr-auto border-left">
-                <a href="/#about" style="color: white!important;"><li class="nav-itemleft">Informace</li></a>
-                <a href="/#pricelist" style="color: white  !important;"><li class="nav-itemleft">Ceník</li></a>
-                <a href="/#contact" style="color: white !important;"><li class="nav-itemleft">Kontakt</li></a>
-                <a href="/folders" style="color: white !important;"><li class="nav-itemleft">Studovna</li></a>              
+                <a href="/#about"><li class="nav-itemleft">Informace</li></a>
+                <a href="/#pricelist"><li class="nav-itemleft">Ceník</li></a>
+                <a href="/#contact"><li class="nav-itemleft">Kontakt</li></a>
+                <a href="/folders"><li class="nav-itemleft">Studovna</li></a>              
                 @if(Auth()->user())
-                <a href="/folders" style="color: white !important;"><li class="nav-itemleft">Odevzdávárna</li></a> 
+                <a href="/submit"><li class="nav-item-submit">Odevzdávárna</li></a> 
                 @endif 
             </ul>
 

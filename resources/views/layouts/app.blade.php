@@ -29,7 +29,7 @@
 </head>
     <body>
             @include('inc.navbar')
-                <div class="container" style="margin-top: 70px">
+                <div class="container" style="margin-top: 56px">
                     @include('inc.messages')
                 </div>
                 @yield('content')
