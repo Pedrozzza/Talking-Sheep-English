@@ -32,6 +32,7 @@ Route::resource('/folders', \App\Http\Controllers\FoldersController::class);
 Route::get('/submit', [\App\Http\Controllers\SubmitsController::class, 'index']);
 
 Route::post('/homeworks', [\App\Http\Controllers\HomeworksController::class, 'store']);
+Route::delete('/homeworks/{homework}', [\App\Http\Controllers\HomeworksController::class, 'destroy']);
 
 Route::get('/administration', [\App\Http\Controllers\AdministrationsController::class, 'index'])->name('administration');
 

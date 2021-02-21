@@ -11,7 +11,7 @@
             {!! Form::open(['action' => 'App\Http\Controllers\HomeworksController@store', 'method' => 'POST', 'enctype' => 'multipart/form-data']) !!}
             <div class="form-group font-weight-bold">
 
-                {{Form::label('name', 'Jméno')}}
+                {{Form::label('name', 'Vaše jméno')}}
                 {{Form::text('name','',)}}
             
                 {{Form::label('number', 'Číslo úkolu')}}

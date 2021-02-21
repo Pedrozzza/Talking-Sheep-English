@@ -11108,6 +11108,28 @@ h5 {
   background: linear-gradient(to bottom right, #0066cc 2%, #0099ff 20%);
 }
 
+.nav-itemright {
+  background: white;
+  color: blue !important;
+  border-radius: 10px;
+  padding: 0.3rem;
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-align: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+@media (max-width: 700px) {
+  .nav-itemright {
+    margin-top: 1rem;
+    margin-bottom: 0.3rem;
+  }
+}
+
+.nav-itemright:hover {
+  background: linear-gradient(to bottom right, #ffffff 2%, #e2e2e2 20%);
+}
+
 .nav-item-submit {
   background: white;
   color: #c71818 !important;
@@ -11126,7 +11148,7 @@ h5 {
 }
 
 .nav-item-submit:hover {
-  background: linear-gradient(to bottom right, #fff3f5 2%, #f6e5e5 20%);
+  background: linear-gradient(to bottom right, #ffffff 2%, #e2e2e2 20%);
 }
 
 .myButton {
@@ -11330,7 +11352,13 @@ h5 {
 
 @media (min-width: 768px) {
   .submit_padding {
-    padding-top: 325px;
+    padding-top: 300px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .submit_padding {
+    padding-top: 450px;
   }
 }
 
@@ -11338,6 +11366,43 @@ h5 {
   background-color: crimson;
   color: white;
   border-radius: 30px;
-  padding: 0.15rem;
+}
+
+.message {
+  background-color: forestgreen;
+  color: white;
+  border-radius: 30px;
+}
+
+.download {
+  background-color: #a1b917;
+  color: white;
+  border-radius: 30px;
+  padding: 0.3rem;
+  border: 0.5px solid black;
+}
+
+table,
+th,
+td {
+  border: 1px solid black;
+}
+
+table {
+  width: 100%;
+}
+
+th {
+  height: 50px;
+  text-align: center;
+  background-color: #00bcd4;
+  color: white;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+td {
+  height: 40px;
+  text-align: center;
 }
 

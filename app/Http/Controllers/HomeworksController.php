@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Homework;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class HomeworksController extends Controller
 {
@@ -37,6 +38,15 @@ class HomeworksController extends Controller
         $homework->save();
 
 
-        return 'uploaded right';
+        return redirect('/submit')->with('success', 'úkol úspěšne odeslán!');
+    }
+
+    public function destroy($id) {
+
+        $homework = Homework::find($id);
+        Storage::delete('public/homework_upload/' . $homework->file);
+        $homework->delete($id);
+
+        return redirect('/administration')->with('success', 'Homework deleted!');
     }
 }
