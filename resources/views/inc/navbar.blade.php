@@ -43,11 +43,11 @@
                         
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                             @if(Auth()->user()->id == 1)
-                                <a href="/homework" class="dropdown-item contactemail">Homework</a>
+                                <a href="{{ route('administration') }}" class="dropdown-item contactemail">Administrace</a>
                             @endif 
                             <a class="dropdown-item contactemail" href="{{ route('logout') }}"
-                               onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
+                                onclick="event.preventDefault();
+                                document.getElementById('logout-form').submit();">
                                 Odhlásit se
                             </a>
 
