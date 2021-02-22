@@ -1,7 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
+  
     <div class="container">
+        @include('inc.messages')
         <div style="margin-top: 50px;margin-bottom: 50px">
             <h2 class="d-flex justify-content-center mb-4">Seznam kategorií</h2>
             @if(Auth()->user()->id == 1)

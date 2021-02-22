@@ -38,7 +38,7 @@ class HomeworksController extends Controller
         $homework->save();
 
 
-        return redirect('/submit')->with('success', 'úkol úspěšne odeslán!');
+        return redirect('/submit')->with('success', 'Úkol úspěšne odeslán!');
     }
 
     public function destroy($id) {

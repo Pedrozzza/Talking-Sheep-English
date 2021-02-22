@@ -10,7 +10,7 @@
             <div class="mt-3">
             {!! Form::open(['action' => 'App\Http\Controllers\HomeworksController@store', 'method' => 'POST', 'enctype' => 'multipart/form-data']) !!}
             <div class="form-group font-weight-bold">
-
+            @include('inc.messages')    
                 {{Form::label('name', 'Vaše jméno')}}
                 {{Form::text('name','',)}}
             

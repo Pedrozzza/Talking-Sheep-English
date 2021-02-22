@@ -3,6 +3,7 @@
 @section('content')
 <section id="administration">
     <div class="container">
+    @include('inc.messages')  
         <h4 class="my-3">Seznam aktuálních studentů</h4>
         <table>
             <tr class="">
