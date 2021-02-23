@@ -5,6 +5,8 @@ use App\Http\Controllers\PagesController;
 use App\Http\Controllers\PostsController;
 use App\Http\Controllers\FoldersController;
 use App\Http\Controllers\SubmitsController;
+use App\Http\Controllers\CentralsController;
+use App\Http\Controllers\MessagesController;
 use App\Http\Controllers\HomeworksController;
 use App\Http\Controllers\AdministrationsController;
 /*
@@ -37,3 +39,8 @@ Route::delete('/homeworks/{homework}', [\App\Http\Controllers\HomeworksControlle
 Route::get('/administration', [\App\Http\Controllers\AdministrationsController::class, 'index'])->name('administration');
 
 Route::delete('/users/{user}', [\App\Http\Controllers\AdministrationsController::class, 'destroy']);
+
+Route::get('/administration/message/{user}', [\App\Http\Controllers\MessagesController::class, 'index']);
+Route::post('/administration/message/{user}', [\App\Http\Controllers\MessagesController::class, 'store']);
+
+Route::get('/central', [App\Http\Controllers\CentralsController::class, 'index'])->name('central');

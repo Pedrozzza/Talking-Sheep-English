@@ -27,7 +27,7 @@
                         {!! Form::close() !!}
                     </td>
                     <td>
-                        {!! Form::open(['method' => '', 'onclick'=> 'return confirm("Odeslat")']) !!}
+                        {!! Form::open(['action' => ['App\Http\Controllers\MessagesController@index', $user->id], 'method' => 'get']) !!}
                         {{ Form::submit('&#9993;', ['class' => 'message']) }}
                         {!! Form::close() !!}
                     </td>
@@ -41,7 +41,7 @@
        
         <h4 class="my-3">Odevzdané úkoly</h4>
         
-        <table>
+        <table class="mb-3">
             <tr class="">
                 <th>ID</th>
                 <th>ID studenta</th>

@@ -11110,12 +11110,13 @@ h5 {
 
 .nav-itemright {
   background: white;
-  color: blue !important;
+  color: black !important;
   border-radius: 10px;
-  padding: 0.2rem 0.3rem;
+  padding: 0.2rem 0.4rem;
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   text-align: center;
+  text-shadow: 1px 1px 1px #c4c3c3;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -11375,7 +11376,7 @@ h5 {
 }
 
 .download {
-  background-color: #a1b917;
+  background-color: #2f11d8;
   color: white;
   border-radius: 30px;
   padding: 0.3rem;

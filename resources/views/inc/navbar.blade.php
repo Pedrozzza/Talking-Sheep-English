@@ -36,7 +36,7 @@
                         </li>
                     @endif
                 @else
-                    <a href="" class="nav-itemright ml-3">&#9993; &nbsp; 0</a>
+                    <a href="{{ route('central') }}" class="nav-itemright ml-3">&#9993; &nbsp;{{ $count }} </a>
                     <li class="nav-item dropdown">
                         <a id="navbarDropdown" class="nav-link dropdown-toggle ml-3" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                             {{ Auth::user()->name }}

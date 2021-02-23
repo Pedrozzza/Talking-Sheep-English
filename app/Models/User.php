@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Models\Message;
 use App\Models\Homework;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
@@ -45,5 +46,9 @@ class User extends Authenticatable
 
     public function homeworks() {
         return $this->hasMany(Homework::class);
+    }
+
+    public function messages() {
+        return $this->hasMany(Message::class);
     }
 }
