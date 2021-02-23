@@ -42,5 +42,6 @@ Route::delete('/users/{user}', [\App\Http\Controllers\AdministrationsController:
 
 Route::get('/administration/message/{user}', [\App\Http\Controllers\MessagesController::class, 'index']);
 Route::post('/administration/message/{user}', [\App\Http\Controllers\MessagesController::class, 'store']);
+Route::delete('/central/delete/{message}', [\App\Http\Controllers\MessagesController::class, 'destroy']);
 
 Route::get('/central', [App\Http\Controllers\CentralsController::class, 'index'])->name('central');

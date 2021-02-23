@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use App\Models\Message;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class MessagesController extends Controller
 {
@@ -48,5 +49,14 @@ class MessagesController extends Controller
 
 
         return redirect('/administration')->with('success', 'Zpráva odeslána!');
+    }
+
+    public function destroy($id) {
+
+        $message = Message::find($id);
+        Storage::delete('public/message_upload/' . $message->file);
+        $message->delete($id);
+
+        return redirect('/central')->with('success', 'Report vymazán');
     }
 }
