@@ -19,7 +19,6 @@ class MessagesController extends Controller
         
         //validace
         $this->validate($request, [
-            'title' => 'required | max:255',
             'body' => 'nullable',
             'number' => 'nullable | numeric | max:255',
             'file_message' => 'nullable | file | max: 10000',
@@ -40,8 +39,7 @@ class MessagesController extends Controller
         //ulozeni souboru do databaze
         $message = new Message;
         $message->user_id = $id;
-        $message->title = $request->input('title');
-        $message->body = $request->input('body');
+        $message->notes = $request->input('notes');
         $message->number = $request->input('number');
         $message->file = $fileNameToStore;
         $message->evaluation = $request->input('evaluation');

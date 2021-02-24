@@ -72,6 +72,40 @@
                 </tr>
                 @endforeach       
         </table>
+
+    <hr>    
+
+        <h4 class="my-3">Správce registračních kódů</h4>
+        <div class="my-3">
+            {!! Form::open(['action' => 'App\Http\Controllers\CodesController@store', 'method' => 'POST']) !!}
+                {{ Form::label('code', 'Vytvořit nový kód')}}
+                {{ Form::text('code','')}}
+                {{ Form::submit('Vytvořit', ['class' => 'btn btn-primary']) }}
+            {!! Form::close() !!}
+        </div>
+
+        <p>Seznam aktuálně platných kódů:</p>
+        <table class="mb-3">
+            <tr class="">
+                <th>ID</th>
+                <th>Kód</th>
+                <th>Vytvořeno</th>                                
+                <th>Odebrat kód</th>              
+            </tr>
+            
+                @foreach( $codes as $code )
+                <tr>
+                    <td>{{ $code->id }}</td>
+                    <td>{{ $code->code }}</td>
+                    <td>{{ $code->created_at }}</td>
+                    <td>
+                        {!! Form::open(['action' => ['App\Http\Controllers\CodesController@destroy', $code->id], 'method' => 'DELETE', 'onclick'=> 'return confirm("Opravdu vymazat tento registrační kód? Akce je nenávratná")']) !!}
+                        {{ Form::submit('X', ['class' => 'delete']) }}
+                        {!! Form::close() !!}
+                    </td>
+                </tr>
+                @endforeach       
+        </table>
     </div>
 </section>
     

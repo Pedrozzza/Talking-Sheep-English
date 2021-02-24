@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Code;
 use App\Models\User;
 use App\Models\Homework;
 use Illuminate\Http\Request;
@@ -14,8 +15,9 @@ class AdministrationsController extends Controller
 
         $users = User::all();
         $homeworks = Homework::orderBy('created_at', 'DESC')->get();
+        $codes = Code::all();
 
-        return view('administration.index')->with(compact('users', 'homeworks'));
+        return view('administration.index')->with(compact('users', 'homeworks', 'codes'));
     }
 
     public function destroy($id)

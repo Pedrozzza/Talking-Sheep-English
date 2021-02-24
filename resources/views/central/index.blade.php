@@ -4,31 +4,25 @@
 
     <div class="container">
     @include('inc.messages')
-    <h4 class="my-3">Příchozí pošta</h4>
+    <h4 class="my-5">Hodnocení úloh</h4>
         
         
         <table class="mb-3">
-            <tr class="">
-                <th>Od koho</th>
-                <th>Předmět</th>
-                <th>Zpráva</th>            
+            <tr>            
                 <th>Číslo úkolu</th>
-                <th>Soubor</th>
+                <th>Poznámka</th>
                 <th>Hodnocení</th>
                 <th>Doručeno</th>
                 <th>Smazat</th>
-                <th>Stáhnout</th>
+                <th>Stáhnout soubor</th>
 
             </tr>
             @if(count($messages) > 0)
                 @foreach( $messages as $message )
-                <tr>
-                    <td></td>
-                    <td>{{ $message->title }}</td>
-                    <td>{!! $message->body !!}</td>
-                    <td>{{ $message->number }}</td>
-                    <td>{{ $message->file }}</td>
-                    <td>{{ $message->evaluation }}</td>
+                <tr style="word-break:break-word;">
+                    <td class="number">{{ $message->number }}</td>
+                    <td>{{ $message->notes }}</td>
+                    <td class="evaluation">{{ $message->evaluation }}</td>
                     <td>{{ $message->created_at }}</td>
                     <td>
                         {!! Form::open(['action' => ['App\Http\Controllers\MessagesController@destroy', $message->id], 'method' => 'DELETE', 'onclick'=> 'return confirm("Opravdu si přejete tento report smazat? Akce je nenávratná")']) !!}
@@ -43,9 +37,7 @@
                 </tr>
                 @endforeach
             @else
-            <tr><td>Žádné zprávy k zobrazení</td>
-                          </tr>
-                
+            <p>Žádné hodnocení úkolu zatím není k zobrazení</p>              
             @endif 
         </table>
     </div>

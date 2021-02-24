@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CodesController;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\PostsController;
 use App\Http\Controllers\FoldersController;
@@ -45,3 +46,6 @@ Route::post('/administration/message/{user}', [\App\Http\Controllers\MessagesCon
 Route::delete('/central/delete/{message}', [\App\Http\Controllers\MessagesController::class, 'destroy']);
 
 Route::get('/central', [App\Http\Controllers\CentralsController::class, 'index'])->name('central');
+
+Route::post('/code', [App\Http\Controllers\CodesController::class, 'store']);
+Route::delete('/code/{code}', [App\Http\Controllers\CodesController::class, 'destroy']);

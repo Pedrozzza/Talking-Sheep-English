@@ -2,13 +2,14 @@
 
 namespace App\Http\Controllers\Auth;
 
-use App\Http\Controllers\Controller;
-use App\Providers\RouteServiceProvider;
+use App\Models\Code;
 use App\Models\User;
-use Illuminate\Foundation\Auth\RegistersUsers;
-use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Validator;
 use Illuminate\Validation\Rule;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Hash;
+use App\Providers\RouteServiceProvider;
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Foundation\Auth\RegistersUsers;
 
 class RegisterController extends Controller
 {
@@ -66,8 +67,13 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        //validation if a register code is valid in codes array
+        $valid_codes = Code::all();
+        $valid_codes_names = $valid_codes->pluck('code');
+        $array = json_decode(json_encode($valid_codes_names), true);
         $code = $_POST['code'];
-        if($code == 'kdj56ewfwr' || $code == 'o76fw78fds' || $code == 'w954csff12' || $code == 'bsk9qzf5ew' || $code == 'mn17q77qq' || $code == 'pkj98c94ca') {
+
+        if(in_array($code, $array)) {
             return User::create([
                 'name' => $data['name'],
                 'email' => $data['email'],
