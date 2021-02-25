@@ -47,6 +47,11 @@
                 {{Form::file('file_homework')}}
                 Předchozí soubor: {{$post->file_homework}}
             </div>
+            <p style="font-weight:bold" class="pt-3">Soubor LETS TALK:</p>
+            <div class="form-group font-weight-bold">
+                {{Form::file('file_conversation')}}
+                Předchozí soubor: {{$post->file_conversation}}
+            </div>
             {{Form::submit('Odeslat', ['class' => 'btn btn-primary'])}}
             {!! Form::close() !!}
         </div>
