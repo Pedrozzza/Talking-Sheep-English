@@ -42,7 +42,7 @@ Route::get('/administration', [\App\Http\Controllers\AdministrationsController::
 
 Route::delete('/users/{user}', [\App\Http\Controllers\AdministrationsController::class, 'destroy']);
 
-Route::get('/administration/message/{user}', [\App\Http\Controllers\MessagesController::class, 'index']);
+Route::get('/administration/message/{user}', [\App\Http\Controllers\MessagesController::class, 'index'])->middleware('admin', 'auth');
 Route::post('/administration/message/{user}', [\App\Http\Controllers\MessagesController::class, 'store']);
 Route::delete('/central/delete/{message}', [\App\Http\Controllers\MessagesController::class, 'destroy']);
 
