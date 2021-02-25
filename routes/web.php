@@ -27,18 +27,18 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/', [App\Http\Controllers\PagesController::class, 'index']);
-Route::get('/welcome', [App\Http\Controllers\PagesController::class, 'welcome']);
+Route::get('/welcome', [App\Http\Controllers\PagesController::class, 'welcome'])->middleware('auth');
 
 Route::resource('/posts', \App\Http\Controllers\PostsController::class, ['except' => ['create']]);
 Route::get('/posts/create/{id}', [\App\Http\Controllers\PostsController::class, 'create']);
 Route::resource('/folders', \App\Http\Controllers\FoldersController::class);
 
-Route::get('/submit', [\App\Http\Controllers\SubmitsController::class, 'index']);
+Route::get('/submit', [\App\Http\Controllers\SubmitsController::class, 'index'])->middleware('auth');
 
 Route::post('/homeworks', [\App\Http\Controllers\HomeworksController::class, 'store']);
 Route::delete('/homeworks/{homework}', [\App\Http\Controllers\HomeworksController::class, 'destroy']);
 
-Route::get('/administration', [\App\Http\Controllers\AdministrationsController::class, 'index'])->name('administration');
+Route::get('/administration', [\App\Http\Controllers\AdministrationsController::class, 'index'])->name('administration')->middleware('admin', 'auth');
 
 Route::delete('/users/{user}', [\App\Http\Controllers\AdministrationsController::class, 'destroy']);
 

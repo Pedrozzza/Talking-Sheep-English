@@ -20,6 +20,7 @@ class User extends Authenticatable
      */
     protected $fillable = [
         'name',
+        'is_admin',
         'email',
         'code',
         'password',
@@ -50,5 +51,9 @@ class User extends Authenticatable
 
     public function messages() {
         return $this->hasMany(Message::class);
+    }
+
+    public function isAdmin() {
+        return $this->is_admin;
     }
 }
