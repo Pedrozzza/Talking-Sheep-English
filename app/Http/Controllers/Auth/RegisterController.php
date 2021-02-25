@@ -4,9 +4,11 @@ namespace App\Http\Controllers\Auth;
 
 use App\Models\Code;
 use App\Models\User;
+use App\Mail\WelcomeMail;
 use Illuminate\Validation\Rule;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Mail;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Validator;
@@ -77,12 +79,15 @@ class RegisterController extends Controller
         $code = $_POST['code'];
 
         if(in_array($code, $array)) {
+
+             Mail::to($data['email'])->send(new WelcomeMail());
              return User::create([
                 'name' => $data['name'],
                 'email' => $data['email'],
                 'password' => Hash::make($data['password']),
                 'code' => $data['code'],
             ]);
+            
             
         } else {
             exit();

@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use App\Models\Message;
+use App\Mail\MessageMail;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Storage;
 
 class MessagesController extends Controller
@@ -17,6 +19,8 @@ class MessagesController extends Controller
 
     public function store(Request $request, $id) {
         
+        
+
         //validace
         $this->validate($request, [
             'body' => 'nullable',
@@ -45,6 +49,9 @@ class MessagesController extends Controller
         $message->evaluation = $request->input('evaluation');
         $message->save();
 
+        $user = User::find($id);
+        
+        Mail::to($user->email)->send(new MessageMail());
 
         return redirect('/administration')->with('success', 'Zpráva odeslána!');
     }
