@@ -11,4 +11,8 @@ class PagesController extends Controller
 
         return view('pages.index');
     }
+
+    public function welcome() {
+        return view('pages.welcome');
+    }
 }

@@ -27,6 +27,7 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/', [App\Http\Controllers\PagesController::class, 'index']);
+Route::get('/welcome', [App\Http\Controllers\PagesController::class, 'welcome']);
 
 Route::resource('/posts', \App\Http\Controllers\PostsController::class, ['except' => ['create']]);
 Route::get('/posts/create/{id}', [\App\Http\Controllers\PostsController::class, 'create']);

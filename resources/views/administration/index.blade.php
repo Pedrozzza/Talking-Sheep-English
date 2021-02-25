@@ -54,7 +54,7 @@
             </tr>
             
                 @foreach( $homeworks as $homework )
-                <tr>
+                <tr id="row" class="unread">
                     <td>{{ $homework->id }}</td>
                     <td>{{ $homework->user_id }}</td>
                     <td>{{ $homework->name }}</td>
@@ -84,8 +84,8 @@
             {!! Form::close() !!}
         </div>
 
-        <p>Seznam aktuálně platných kódů:</p>
-        <table class="mb-3">
+        <p >Seznam aktuálně platných kódů:</p>
+        <table id="row" class="mb-3">
             <tr class="">
                 <th>ID</th>
                 <th>Kód</th>
@@ -107,7 +107,10 @@
                 @endforeach       
         </table>
     </div>
+
 </section>
-    
+
 @endsection
 
+
+    

@@ -8,6 +8,7 @@ use Illuminate\Validation\Rule;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use App\Providers\RouteServiceProvider;
+use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 
@@ -31,7 +32,8 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/';
+    protected $redirectTo = '/welcome';
+   
 
     /**
      * Create a new controller instance.
@@ -67,6 +69,7 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        
         //validation if a register code is valid in codes array
         $valid_codes = Code::all();
         $valid_codes_names = $valid_codes->pluck('code');
@@ -74,12 +77,13 @@ class RegisterController extends Controller
         $code = $_POST['code'];
 
         if(in_array($code, $array)) {
-            return User::create([
+             return User::create([
                 'name' => $data['name'],
                 'email' => $data['email'],
                 'password' => Hash::make($data['password']),
                 'code' => $data['code'],
             ]);
+            
         } else {
             exit();
         }
