@@ -1,0 +1,64 @@
+.delete {
+    background-color: crimson;
+    color: white;
+    border-radius: 30px;
+}
+
+.message {
+    background-color: forestgreen;
+    color: white;
+    border-radius: 30px;
+}
+
+.download {
+    background-color: rgb(47, 17, 216);
+    color: white;
+    border-radius: 30px;
+    padding: 0.3rem;
+    border:0.5px solid black;
+}
+
+table, th, td {
+    border: 1px solid black;
+    padding: 0.5rem
+}
+
+table {
+    width: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+th {
+    height: 50px;
+    text-align: center;
+    background-color: #00bcd4;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+td {
+    height: 40px;
+    text-align: center;
+}
+
+.number {
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-shadow: 1px 1px 1px #c9b6b6;
+}
+
+.evaluation {
+    font-weight: bolder;
+    font-size: 1.5rem;
+    color: rgb(255, 187, 0);
+    text-shadow: 1px 1px 1px #e9c111;
+
+
+}
+
+.checked {
+    color: rgb(90, 148, 3);
+    font-weight: bold;
+    font-size: 1.8rem;
+}

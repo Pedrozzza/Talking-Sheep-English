@@ -40,6 +40,10 @@
             <div class="form-group font-weight-bold">
                 {{Form::file('file_homework')}}
             </div>
+            <p style="font-weight:bold" class="pt-3">Soubor CONVERSATION:</p>
+            <div class="form-group font-weight-bold">
+                {{Form::file('file_conversation')}}
+            </div>
             {{Form::hidden('folder_id', $folder_id)}}
             {{Form::submit('Odeslat', ['class' => 'btn btn-primary'])}}
             {!! Form::close() !!}

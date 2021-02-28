@@ -11088,6 +11088,7 @@ h5 {
 
 .nav-itemleft {
   background: linear-gradient(to bottom right, #0066cc 8%, #0099ff 90%);
+  color: white !important;
   border-radius: 10px;
   margin-left: 1rem;
   padding: 0.4rem;
@@ -11105,6 +11106,50 @@ h5 {
 
 .nav-itemleft:hover {
   background: linear-gradient(to bottom right, #0066cc 2%, #0099ff 20%);
+}
+
+.nav-itemright {
+  background: white;
+  color: black !important;
+  border-radius: 10px;
+  padding: 0.2rem 0.4rem;
+  font-weight: bold;
+  font-size: 1.1rem;
+  text-align: center;
+  text-shadow: 1px 1px 1px #c4c3c3;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+@media (max-width: 700px) {
+  .nav-itemright {
+    margin-top: 1rem;
+    margin-bottom: 0.3rem;
+  }
+}
+
+.nav-itemright:hover {
+  background: linear-gradient(to bottom right, #ffffff 2%, #e2e2e2 20%);
+}
+
+.nav-item-submit {
+  background: white;
+  color: #c71818 !important;
+  border-radius: 10px;
+  margin-left: 1rem;
+  padding: 0.4rem;
+  text-align: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+@media (max-width: 700px) {
+  .nav-item-submit {
+    margin-top: 1rem;
+    margin-bottom: 0.3rem;
+  }
+}
+
+.nav-item-submit:hover {
+  background: linear-gradient(to bottom right, #ffffff 2%, #e2e2e2 20%);
 }
 
 .myButton {
@@ -11218,6 +11263,13 @@ h5 {
 
 .nav-link {
   text-shadow: 2px 2px 4px #000000;
+  text-align: center;
+}
+
+.nav-link:hover {
+  background-color: #378de5;
+  border-radius: 30px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .forms {
@@ -11263,5 +11315,236 @@ h5 {
 
 .box-inner {
   box-shadow: inset -2px 12px 10px -10px #9e9e9eeb;
+}
+
+#submit {
+  text-align: center;
+}
+
+.sheep_image {
+  border-radius: 30px;
+  width: 100%;
+  height: 275px;
+}
+
+.sheep_background {
+  margin-top: 0;
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+}
+
+@media (min-width: 1025px) {
+  .sheep_background {
+    background: linear-gradient(to bottom, rgba(255, 253, 253, 0) 0%, rgba(255, 254, 254, 0) 75%, #fffefe 100%), url(/images/sheep_background4.jpg?c376a9b96ac60808d9060ed067482465);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+  }
+}
+
+.submit_container {
+  width: auto;
+}
+
+@media (min-width: 768px) {
+  .submit_container {
+    width: 600px;
+  }
+}
+
+.submit_padding {
+  padding-top: 133px;
+}
+
+@media (min-width: 768px) {
+  .submit_padding {
+    padding-top: 300px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .submit_padding {
+    padding-top: 450px;
+  }
+}
+
+.delete {
+  background-color: crimson;
+  color: white;
+  border-radius: 30px;
+}
+
+.message {
+  background-color: forestgreen;
+  color: white;
+  border-radius: 30px;
+}
+
+.download {
+  background-color: #2f11d8;
+  color: white;
+  border-radius: 30px;
+  padding: 0.3rem;
+  border: 0.5px solid black;
+}
+
+table,
+th,
+td {
+  border: 1px solid black;
+  padding: 0.5rem;
+}
+
+table {
+  width: 100%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+th {
+  height: 50px;
+  text-align: center;
+  background-color: #00bcd4;
+  color: white;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+td {
+  height: 40px;
+  text-align: center;
+}
+
+.number {
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-shadow: 1px 1px 1px #c9b6b6;
+}
+
+.evaluation {
+  font-weight: bolder;
+  font-size: 1.5rem;
+  color: #ffbb00;
+  text-shadow: 1px 1px 1px #e9c111;
+}
+
+.checked {
+  color: #5a9403;
+  font-weight: bold;
+  font-size: 1.8rem;
+}
+
+.alert-success {
+  background-color: #d7f3e300;
+  border-color: #c7eed800;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.alert-danger {
+  color: crimson;
+  background-color: #d7f3e300;
+  border-color: #c7eed800;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+#welcomepage {
+  text-align: center;
+  margin-top: 50px;
+}
+
+@media (min-width: 768px) {
+  #welcomepage {
+    margin-top: 80px;
+  }
+}
+
+@media (min-width: 1600px) {
+  #welcomepage {
+    margin-top: 120px;
+  }
+}
+
+.welcomepicture {
+  width: 160px;
+  height: 127px;
+  padding-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+  .welcomepicture {
+    width: 161px;
+    height: 150px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .welcomepicture {
+    margin-bottom: 2rem;
+    width: 353px;
+    height: 274px;
+  }
+}
+
+.h2title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: white !important;
+  text-shadow: 2px 2px 4px #4c3f9199 !important;
+  background-color: #1976e8;
+  border-radius: 82px;
+  padding: 2rem 0.5rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.86), 0 6px 24px 0 rgba(18, 65, 126, 0.95);
+}
+
+@media (min-width: 768px) {
+  .h2title {
+    font-size: 1.5rem;
+    width: 50%;
+    margin-inline: auto;
+  }
+}
+
+@media (min-width: 1600px) {
+  .h2title {
+    margin-bottom: 4rem;
+    font-size: 2.8rem;
+    width: 100%;
+  }
+}
+
+.h3title {
+  color: #cd0c2c !important;
+  text-shadow: 2px 2px 4px #3822aa99 !important;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+@media (min-width: 768px) {
+  .h3title {
+    font-size: 1.8rem;
+  }
+}
+
+@media (min-width: 1600px) {
+  .h3title {
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .text {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1600px) {
+  .text {
+    font-size: 1rem;
+  }
 }
 

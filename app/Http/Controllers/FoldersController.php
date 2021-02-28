@@ -70,6 +70,7 @@ class FoldersController extends Controller
      */
     public function show($id)
     {
+        
         $folder = Folder::find($id);
         $posts = Post::orderBy('title')->whereIn('folder_id', $folder)->paginate(50);
         return view('folders.show')->with(compact('folder','posts'));

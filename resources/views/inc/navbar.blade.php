@@ -11,10 +11,13 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <!-- Left Side Of Navbar -->
             <ul class="navbar-nav mr-auto border-left">
-                <a href="/#about" style="color: white!important;"><li class="nav-itemleft">Informace</li></a>
-                <a href="/#pricelist" style="color: white  !important;"><li class="nav-itemleft">Ceník</li></a>
-                <a href="/folders" style="color: white !important;"><li class="nav-itemleft">Studovna</li></a>
-                <a href="/#contact" style="color: white !important;"><li class="nav-itemleft">Kontakt</li></a>
+                <a href="/#about"><li class="nav-itemleft">Informace</li></a>
+                <a href="/#pricelist"><li class="nav-itemleft">Ceník</li></a>
+                <a href="/#contact"><li class="nav-itemleft">Kontakt</li></a>
+                <a href="/folders"><li class="nav-itemleft">Studovna</li></a>              
+                @if(Auth()->user())
+                <a href="/submit"><li class="nav-item-submit">Odevzdávárna</li></a> 
+                @endif 
             </ul>
 
             <!-- Right Side Of Navbar -->
@@ -33,15 +36,19 @@
                         </li>
                     @endif
                 @else
+                    <a href="{{ route('central') }}" class="nav-link ml-3" style="font-size: 1.1rem">&#9993; &nbsp;{{ $count }} </a>
                     <li class="nav-item dropdown">
-                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                        <a id="navbarDropdown" class="nav-link dropdown-toggle ml-3" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                             {{ Auth::user()->name }}
                         </a>
-
-                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                        
+                        <div class="dropdown-menu dropdown-menu-right ml-3" aria-labelledby="navbarDropdown">
+                            @if(Auth()->user()->id == 1)
+                                <a href="{{ route('administration') }}" class="dropdown-item contactemail">Administrace</a>
+                            @endif 
                             <a class="dropdown-item contactemail" href="{{ route('logout') }}"
-                               onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
+                                onclick="event.preventDefault();
+                                document.getElementById('logout-form').submit();">
                                 Odhlásit se
                             </a>
 

@@ -24,7 +24,11 @@
                 <hr>
                 @if (!empty($post['file_homework']))
                 <p><a class="p-2 mr-2" style="color: red !important; font-weight: bold; border: 2px solid red; border-radius: 30px" href="/storage/file_upload/{{$post->file_homework}}">HOMEWORK</a><-   Translation for this lesson</p>               
-                @endif 
+                @endif
+                <hr>
+                @if (!empty($post['file_conversation']))
+                <p><a class="p-2 mr-2" style="color: blue !important; font-weight: bold; border: 2px solid blue; border-radius: 30px" href="/storage/file_upload/{{$post->file_conversation}}">CONVERSATION</a><-   conversation for this lesson</p>               
+                @endif  
             </div>
 
             @if(Auth()->user()->id == 1)

@@ -1,7 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
+  
     <section id="category">
+        @include('inc.messages')
         <div class="container">
             <div class="">
                 <a href="/folders" class="btn-back">Go back</a>

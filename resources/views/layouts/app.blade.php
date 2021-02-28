@@ -29,8 +29,8 @@
 </head>
     <body>
             @include('inc.navbar')
-                <div class="container" style="margin-top: 70px">
-                    @include('inc.messages')
+                <div class="container" style="margin-top: 56px">
+                    
                 </div>
                 @yield('content')
               
