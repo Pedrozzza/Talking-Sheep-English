@@ -55,7 +55,7 @@ class MessagesController extends Controller
         $homework = Homework::where('user_id', $user->id)->update(array('checked' => '&#9745;'));
         
 
-        //Mail::to($user->email)->send(new MessageMail());
+        Mail::to($user->email)->send(new MessageMail());
 
         return redirect('/administration')->with('success', 'Zpráva odeslána!');
     }

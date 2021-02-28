@@ -1,9 +1,12 @@
 @component('mail::message')
-# Zdravíme z Talking Sheep English
+# Talking Sheep tě zdraví!
 
-Máte nově ohodnocený úkol na Vašem účtu.
+I checked your homework and you can find the result in your Talking Sheep account.
 <br>
+(Zkontrolovala jsem tvůj úkol a výsledek můžeš najít na svém Talking Sheep účtu)
 <br>
-S přáním hezkého dne,<br>
-{{ config('app.name') }}
+<img src="{{ url('https://cdn.pixabay.com/photo/2013/07/13/12/39/sheep-160041_960_720.png')}}" style="width:50%" alt="sheep">
+<br>
+Měj se,<br><br>
+# Talking sheep English
 @endcomponent
