@@ -11429,13 +11429,10 @@ td {
   text-shadow: 1px 1px 1px #e9c111;
 }
 
-.unread {
+.checked {
+  color: #5a9403;
   font-weight: bold;
-}
-
-.wasRead {
-  font-weight: normal;
-  background-color: greenyellow;
+  font-size: 1.8rem;
 }
 
 .alert-success {
@@ -11471,15 +11468,15 @@ td {
 }
 
 .welcomepicture {
-  width: 118px;
-  height: 101px;
+  width: 160px;
+  height: 127px;
   padding-bottom: 2rem;
 }
 
 @media (min-width: 768px) {
   .welcomepicture {
-    width: 150px;
-    height: 103px;
+    width: 161px;
+    height: 150px;
   }
 }
 
@@ -11492,7 +11489,7 @@ td {
 }
 
 .h2title {
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   font-weight: bold;
   margin-bottom: 2rem;
   color: white !important;
@@ -11505,8 +11502,8 @@ td {
 
 @media (min-width: 768px) {
   .h2title {
-    font-size: 1.8rem;
-    width: 80%;
+    font-size: 1.5rem;
+    width: 50%;
     margin-inline: auto;
   }
 }
@@ -11515,6 +11512,7 @@ td {
   .h2title {
     margin-bottom: 4rem;
     font-size: 2.8rem;
+    width: 100%;
   }
 }
 

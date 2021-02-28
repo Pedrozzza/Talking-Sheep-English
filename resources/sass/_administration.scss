@@ -57,11 +57,8 @@ td {
 
 }
 
-.unread {
+.checked {
+    color: rgb(90, 148, 3);
     font-weight: bold;
-}
-
-.wasRead {
-    font-weight: normal;
-    background-color: greenyellow;
+    font-size: 1.8rem;
 }

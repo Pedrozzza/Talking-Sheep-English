@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use App\Models\Message;
+use App\Models\Homework;
 use App\Mail\MessageMail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
@@ -51,7 +52,10 @@ class MessagesController extends Controller
 
         $user = User::find($id);
         
-        Mail::to($user->email)->send(new MessageMail());
+        $homework = Homework::where('user_id', $user->id)->update(array('checked' => '&#9745;'));
+        
+
+        //Mail::to($user->email)->send(new MessageMail());
 
         return redirect('/administration')->with('success', 'Zpráva odeslána!');
     }

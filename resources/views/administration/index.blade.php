@@ -43,7 +43,6 @@
         
         <table class="mb-3">
             <tr class="">
-                <th>ID</th>
                 <th>ID studenta</th>
                 <th>Jméno studenta</th>
                 <th>Číslo úkolu</th>
@@ -51,11 +50,11 @@
                 <th>Odevzdáno</th>
                 <th>Smazat</th>
                 <th>Stáhnout</th>
+                <th>Zkontrolováno</th>
             </tr>
             
                 @foreach( $homeworks as $homework )
-                <tr id="row" class="unread">
-                    <td>{{ $homework->id }}</td>
+                <tr id="" class="">
                     <td>{{ $homework->user_id }}</td>
                     <td>{{ $homework->name }}</td>
                     <td>{{ $homework->number }}</td>
@@ -69,6 +68,7 @@
                     <td>
                         <a href="/storage/homework_upload/{{ $homework->file }}" class="download"> &#10149;</a>    
                     </td>
+                    <td class="checked">{!! $homework->checked !!}</td>
                 </tr>
                 @endforeach       
         </table>
@@ -85,7 +85,7 @@
         </div>
 
         <p >Seznam aktuálně platných kódů:</p>
-        <table id="row" class="mb-3">
+        <table id="" class="mb-3">
             <tr class="">
                 <th>ID</th>
                 <th>Kód</th>

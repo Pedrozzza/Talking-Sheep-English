@@ -14,13 +14,13 @@
 }
 
 .welcomepicture {
-    width: 118px;
-    height: 101px;
+    width: 160px;
+    height: 127px;
     padding-bottom: 2rem;
 
     @media (min-width: 768px) {
-        width: 150px;
-        height: 103px;
+        width: 161px;
+        height: 150px;
         
     }
 
@@ -32,7 +32,7 @@
     }
 }
 .h2title {
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     font-weight: bold;
     margin-bottom: 2rem;
     color: white !important;
@@ -43,14 +43,15 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.86), 0 6px 24px 0 rgba(18, 65, 126, 0.95);
 
     @media (min-width: 768px) {
-        font-size: 1.8rem;
-        width: 80%;
+        font-size: 1.5rem;
+        width: 50%;
         margin-inline: auto;    
     }
 
     @media (min-width: 1600px) {
         margin-bottom: 4rem;
         font-size: 2.8rem;  
+        width: 100%;
     }        
 }
 
