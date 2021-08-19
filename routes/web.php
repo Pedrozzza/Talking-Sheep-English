@@ -8,6 +8,7 @@ use App\Http\Controllers\FoldersController;
 use App\Http\Controllers\SubmitsController;
 use App\Http\Controllers\CentralsController;
 use App\Http\Controllers\MessagesController;
+use App\Http\Controllers\ApplicantController;
 use App\Http\Controllers\HomeworksController;
 use App\Http\Controllers\AdministrationsController;
 /*
@@ -28,6 +29,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::get('/', [App\Http\Controllers\PagesController::class, 'index']);
 Route::get('/welcome', [App\Http\Controllers\PagesController::class, 'welcome'])->middleware('auth');
+Route::get('/applicants', [App\Http\Controllers\PagesController::class, 'applicants']);
 
 Route::resource('/posts', \App\Http\Controllers\PostsController::class, ['except' => ['create']]);
 Route::get('/posts/create/{id}', [\App\Http\Controllers\PostsController::class, 'create']);
@@ -50,3 +52,12 @@ Route::get('/central', [App\Http\Controllers\CentralsController::class, 'index']
 
 Route::post('/code', [App\Http\Controllers\CodesController::class, 'store']);
 Route::delete('/code/{code}', [App\Http\Controllers\CodesController::class, 'destroy']);
+
+Route::get('/maintenance', [App\Http\Controllers\PagesController::class, 'maintenance'])->middleware('auth');
+
+Route::get('/massMessaging', [App\Http\Controllers\PagesController::class, 'massMessaging'])->middleware('admin')->name('massMessaging');
+
+Route::post('/sendMassMessage', [\App\Http\Controllers\MessagesController::class, 'sendMassMessage'])->middleware('admin')->name('sendMassMessage');
+
+Route::post('/apply', [\App\Http\Controllers\ApplicantController::class, 'apply'])->name('apply');
+Route::delete('/applicant/{id}', [\App\Http\Controllers\ApplicantController::class, 'destroy']);

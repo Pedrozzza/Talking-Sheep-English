@@ -38,7 +38,46 @@
             <p>Celkový počet studentů: {{ $users->count() }} </p>
         </div>
         <hr>
-       
+
+        <h4 class="my-3">Hromadné zprávy</h4>
+        <div>
+            <a href="{{ route('massMessaging') }}" class="btn btn-primary">Přejít</a>
+        </div>
+        <hr>
+
+        <h4 class="my-3">Seznam zájemců o kurz!</h4>
+        <table>
+            <tr class="">
+                <th>Jméno</th>
+                <th>Email</th>
+                <th>Tel. číslo</th>
+                <th>Zapsán</th>
+                <th>Smazat</th>
+            </tr>
+            
+                @foreach( $applicants as $applicant )
+                <tr>
+                    <td>{{ $applicant->name }}</td>
+                    <td>{{ $applicant->email }}</td>
+                    <td>{{ $applicant->phone }}</td>
+                    <td>{{ $applicant->created_at->format('d/m/Y') }}</td>
+                    <td>
+                        {!! Form::open(['action' => ['App\Http\Controllers\ApplicantController@destroy', $applicant->id], 'method' => 'DELETE', 'onclick'=> 'return confirm("Opravdu smazat zájemce? Smazáním zájemce dojde ke smazaní všech kontaktů na něj a akce je nenávratná")']) !!}
+                        {{ Form::submit('X', ['class' => 'delete']) }}
+                        {!! Form::close() !!}
+                    </td>
+                </tr>
+                @endforeach       
+        </table>
+        
+        @if(count($applicants) <= 0 )
+            <div class="py-2">
+                <p>Dosud nebyl zaznamenán žádný zájemce o kurz</p>
+            </div>
+        @endif
+
+        <hr>
+
         <h4 class="my-3">Odevzdané úkoly</h4>
         
         <table class="mb-3">

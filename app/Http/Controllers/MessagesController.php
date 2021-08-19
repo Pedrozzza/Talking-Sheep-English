@@ -5,10 +5,12 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use App\Models\Message;
 use App\Models\Homework;
+use App\Mail\MassMessage;
 use App\Mail\MessageMail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Redirect;
 
 class MessagesController extends Controller
 {
@@ -67,5 +69,32 @@ class MessagesController extends Controller
         $message->delete($id);
 
         return redirect('/central')->with('success', 'Report vymazán');
+    }
+
+    public function sendMassMessage(Request $request) {
+
+        //validace
+        $this->validate($request, [
+            'subject' => 'required | max:100',
+            'body' => 'required',
+            'users' => 'required',
+        ]);    
+
+        //predmet zpravy
+        $subject = $request->input('subject');
+        //telo zpravy
+        $body =strip_tags($request->input('body'));       
+
+        //pro kazdeho uzivatele 
+        foreach(User::find($request->input('users')) as $user) {
+            
+            //najdi email uzivatele
+            $email = $user->email;
+        
+            //posli email
+            Mail::to($email)->send(new MassMessage($body, $subject));
+        }
+
+        return Redirect::back()->with('success', 'Zpráva odeslána');
     }
 }

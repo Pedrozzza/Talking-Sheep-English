@@ -5,10 +5,15 @@
     <section id="welcome">
         <div class="container d-flex justify-content-center">
             <div class="row">           
-                <div class="mx-auto">
-                    <img src="{{ url('images/logo4.png')}}" alt="english" class="welcomeimage">
-                    <h4 class="mt-2 mb-4 p-4">Soukromě, v malý skupince, živě i po skypu. Na cesty, na zkoušky, k maturitě i do baru</h4>
-                    <a href="/folders" class="btn-1">Naučím tě English, Chceš?</a>
+                <div class="col mx-auto">
+                    <img src="{{ url('images/logo4.png')}}" alt="angličtina chrudim" class="welcomeimage">
+                    <h4 class="head-title">Soukromě, v malý skupince, živě i po skypu. Na cesty, na zkoušky, k maturitě i do baru</h4>
+                    <div class="arrow bounce">
+                        <a href="#about">
+                            <p class="find-more" style="align-items:center">Více info</p>
+                            <i class="fas fa-angle-double-down arrow-size"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -19,13 +24,13 @@
             <div class="container d-flex justify-content-center">
                 <div class="row">
                     <div>
-                        <h2 class="d-flex justify-content-center mb-3">Proč se učit u mně?</h2>
+                        <h2 class="d-flex justify-content-center my-3 my-md-5" style="align-items:center"><i class="fas fa-user-check mr-4 d-none d-sm-block"></i>Proč se učit u mně?</h2>
                             <p class="font-weight-bold" style="font-size: 1.1rem">
-                                Jmenuju se Moni a žila jsem pár let v zahraničí. Učit mě baví, a baví mě kontakt s lidmi. A najdu ty nejšílenější způsoby, jak zapříčinit, aby to bavilo i tebe! Především budeme <strong class="darkred">MLUVIT<i class="em em-wink ml-1" aria-role="presentation" aria-label="WINKING FACE"></i></strong>
+                                Jmenuju se Moni a žila jsem pár let v zahraničí. Učit mě baví, a baví mě kontakt s lidmi. A najdu ty nejšílenější způsoby, jak zapříčinit, aby to bavilo i tebe! Především budeme MLUVIT<i class="em em-wink ml-1" aria-role="presentation" aria-label="WINKING FACE"></i>
                                 Bude to jiné, bude to nové, bude to trhlé a neotřelé. Bude to sranda a navíc si z toho budeš hodně věcí pamatovat! Učíme se, hrajeme hry, a kombinujeme bláznivé věci s neuvěřitelnými, protože čím větší šílenost, tím pro mozek zapamatovatelnější <i class="em em-full_moon_with_face" aria-role="presentation" aria-label="FULL MOON WITH FACE"></i>
                             </p>
                         <div class="d-flex justify-content-center">
-                            <a href="" class="btn-2 mt-3 mb-5" style="font-weight: bold" data-toggle="collapse" data-target="#omne">Rozklikni si o mně více</a>
+                            <a href="" class="btn-4 my-3 my-md-5" style="font-weight:bold; font-size:17px" data-toggle="collapse" data-target="#omne"><i class="fas fa-arrow-circle-down mr-2 spin"></i>Rozklikni si o mně více</a>
                         </div>
                         <div id="omne" class="collapse">
                             <p class="font-weight-bold">
@@ -38,8 +43,8 @@
                                 Učit mě baví, a baví mě kontakt s lidmi. A najdu ty nejšílenější způsoby, jak zapříčinit, aby to bavilo i tebe! Bude to jiné, bude to nové, bude to trhlé a&nbspneotřelé. Bude to sranda a navíc si z toho budeš hodně věcí pamatovat! Učíme se s kontextem, hrajeme hry, a kombinujeme bláznivé věci s&nbspneuvěřitelnými, protože čím větší šílenost, tím pro mozek zapamatovatelnější  <i class="em em-full_moon_with_face ml-1" aria-role="presentation" aria-label="FULL MOON WITH FACE"></i> </b>             
                                 Pořádáme občasné konverzační procházky, pikniky, večery u vína! Socializace, sranda + English  <i class="em em-full_moon_with_face ml-1" aria-role="presentation" aria-label="FULL MOON WITH FACE"></i></br></br>
                             </p>    
-                                <h3 class="d-flex justify-content-center mb-3">Moje kvalifikace</h3>
-                            <p class="font-weight-bold mb-5"> Nemám akademické vzdělání na výuku angličtiny. Znám spoustu lidí, co ano. Ale ačkoliv angličtině dokonale rozumí, a znají perfektně všechny zákonitosti, nemají nervy na to, někoho to učit. Někteří na to zase mají nervy, ale když se jich zeptáte na “Proč je to takhle a proč to nemůže být onak” - odpoví vám složitou šifrou mistra Leonarda, která místo odpovědi přinese do vašich hlav jen více otazníků <i class="em em-grinning ml-1" aria-role="presentation" aria-label="GRINNING FACE"></i> </br>
+                                <h3 class="d-flex justify-content-center mb-3" style="align-items:center"><i class="fas fa-medal mr-4"></i>Moje kvalifikace</h3>
+                            <p class="font-weight-bold my-5"> Nemám akademické vzdělání na výuku <strong>angličtiny</strong>. Znám spoustu lidí, co ano. Ale ačkoliv angličtině dokonale rozumí, a znají perfektně všechny zákonitosti, nemají nervy na to, někoho to učit. Někteří na to zase mají nervy, ale když se jich zeptáte na “Proč je to takhle a proč to nemůže být onak” - odpoví vám složitou šifrou mistra Leonarda, která místo odpovědi přinese do vašich hlav jen více otazníků <i class="em em-grinning ml-1" aria-role="presentation" aria-label="GRINNING FACE"></i> </br>
                                 Já jsem jeden z vás. Byla jsem s angličtinou dlouho tam kde vy, ať už si svou aktuální pozici definujete jakkoliv, a pokud jste u toho sprostí, tak ano, i tam jsem byla <i class="em em-grinning ml-1" aria-role="presentation" aria-label="GRINNING FACE"></i> Moje kvalifikace je získaná praxí - životem a prací v zahraničí, a doplněná samostudiem. No a mám na to už i ten papír ! certifikát z Cambridge:) </br></br>
                                 Pro studenty, kteří chtějí vést jednou obchodní jednání na Manhattnu je všude kolem spousta akademicky vzdělaných učitelů angličtiny.</br>
                                 Já se chci ale zaměřit na vás, kteří si chcete být schopní zařídit věci na cestách, pokecat u bazénu s fešákem z vedlejšího hotelovýho pokoje, sehnat si v&nbspcizí zemi parťáka na třídenní tůru horami, nebo se prostě jen zeptat na cestu. A také na vás, školou povinné studenty, kteří prostě mají v té angličtině stále chaos! No a v neposlední řadě na malý špunty, u kterých je důležitý vzbudit radost a nadšení pro jazyk dříve, než to případně školní systém výuky jazků stihne kompletně zabít.</br></br>
@@ -49,7 +54,7 @@
                         </div>
                     </div>
                     <div>
-                        <h2 class="d-flex justify-content-center mb-3">Jak probíhá výuka?</h2>
+                        <h2 class="d-flex justify-content-center my-3 my-md-5" style="align-items:center"><i class="fas fa-graduation-cap mr-4 d-none d-sm-block"></i>Jak probíhá výuka?</h2>
                             <p class="font-weight-bold" style="font-size: 1.1rem">
                             V lekcích hodně mluvíme, a snažíme se vše naučené hned používat v rozhovoru. Sem tam si zahrajeme hru, nebo si přeložíme text nějaký jednoduchý fajn písničky, kterou si i zazpíváme, takže v lekcích panuje dobrá nálada. Věnujeme pozornost i&nbsphovorový angličtině, protože to je ta, kterou od lidí kolem uslyšíte, a je důležitý jí rozumět <i class="em em-full_moon_with_face ml-1" aria-role="presentation" aria-label="FULL MOON WITH FACE"></i></br>
                             Zásadní je vybudovat si k angličtině dobrej vztah, a chuť se dále zlepšovat i mimo lekce. Vysvětlím ti fajn způsoby, jak si můžeš sám rozšiřovat slovní zásobu nenásilnou a zábavnou formou, a jak svůj mozek postupně dostat do správného naladění na rychlejší progress <i class="em em-wink ml" aria-role="presentation" aria-label="WINKING FACE"></i></br></br>
@@ -64,7 +69,7 @@
                         <h4 class="d-flex justify-content-center mt-4 darkred">Cheers!</h4>
                         <h4 class="d-flex justify-content-center mt-4 darkred"> Moni and the Talking Sheep</h4>
                         <div class="d-flex justify-content-center">
-                            <img src="{{ url('images/sheepka.png')}}" alt="english" style="height:100px; width:100px"/>
+                            <img src="{{ url('images/welcome.png')}}" alt="english" style="height:100px; width:100px"/>
                         </div>
                     </div>                         
                 </div>
@@ -75,52 +80,79 @@
     <section id="pricelist">
         <div class="container d-flex justify-content-center">
             <div class="row">
-                <div>
-                <h2 class="d-flex justify-content-center mb-5">Ceník</h2>
-                <p class="text-center font-weight-bold" style="font-size: 1.2rem">
-                    Dobře mi fungují malý skupinky, např čtveřice. Do nějaký tě přihodím za 200 Kč/60 min.<br><br>
-                    Učím i menší kroužky, které se vytváří operativně dle zájmu, když je dost zájemců, nemám problém otevřít kroužek třeba v Kotěhůlkách pod bukem. <br><br>
-                    <strong>Rozmezí Pardubicko, Chrudimsko, Hlinecko a Vysokomýtsko.</strong><br><br>
-                    Individualismus nelítostně trestám cenou 400 Kč/60 min.  ;)<br><br>
-                    Přihlásíš se s několika kámoši? Slevy! Ukázková hodina z<strong class="darkred">DAR</strong>ma :)<br><br>
-                    Zajímá tě víc? Neváhej mě <a class="darkred" href="#contact">kontaktovat</a>!
-                </p>
+                <div class="col">
+                    <h2 class="d-flex justify-content-center mb-5" style="align-items:center"><i class="fas fa-coins mr-4 d-none d-sm-block"></i>Ceník</h2>
+                    <div class="row">
+                        <div class="col-md-6 offset-md-3" style="overflow-x:auto">
+                            <table class="mb-5 price-text table borderless border-style">
+                                <tr>
+                                    <td>Individuální výuka</td>    
+                                    <td>400 Kč / 60 minut</td>
+                                </tr>
+                                <tr>
+                                    <td>Skupinová výuka</td>    
+                                    <td>200 Kč / 60 minut</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <p class="price-text mb-5">
+                        <strong>Individuální výuka</strong> přináší čas jen pro tebe. <strong>Skupinová výuka</strong> je fajn pro potkávání dalších studentů
+                        a prostřídání parťáků se kterými během lekce mluvíš. Volba je jen na tobě.
+                    </p>
+                    
+                    <div class="row">
+                        <div class="col-md-6 offset-md-3" style="overflow-x:auto">
+                            <p style="font-weight:bold">Orientační slevy při předplacení (výpočet se liší dle týdnů v měsíci):</p>
+                            <table class="mb-5 price-text2 table border-style" >
+                                <tr style="padding:0 !important; vertical-align:center !important">
+                                    <th class="price-th">Týdenní sazba dle lekcí</th>
+                                    <th class="price-th">1 měsíc</th>
+                                    <th class="price-th">3 měsíce</th>
+                                    <th class="price-th">6 měsíců</th>
+                                    <!-- <th class="price-th">9 měsíců</th> -->
+                                </tr>
+                                <tr style="background-color:#f2d0d0; padding:0 !important; vertical-align:center !important">
+                                    <td>400 Kč / týden</td>    
+                                    <td>1 600 Kč</td>
+                                    <td>4 800 Kč</td>    
+                                    <td>9 600 Kč</td>
+                                    <!-- <td>14400 Kč</td> -->
+                                </tr>
+                                <tr style="background-color:#f09d9d; padding:0 !important; vertical-align:center !important">
+                                    <td>Sleva</td>    
+                                    <td></td>
+                                    <td>- 200 Kč</td>    
+                                    <td>- 600 Kč</td>
+                                    <!-- <td>- 1100 Kč</td> -->
+                                </tr>
+                                <tr style="background-color:#a3c2fa; padding:0 !important; vertical-align:center !important">
+                                    <td>800 Kč / týden</td>    
+                                    <td>3 200 Kč</td>
+                                    <td>9 600 Kč</td>    
+                                    <td>19 200 Kč</td>
+                                    <!-- <td>28800 Kč</td> -->
+                                </tr>
+                                <tr style="background-color:#517efe; padding:0 !important; vertical-align:center !important">
+                                    <td>Sleva</td>    
+                                    <td></td>
+                                    <td>- 400 Kč</td>    
+                                    <td>- 1 100 Kč</td>
+                                    <!-- <td>- 1800 Kč</td> -->
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    
+                    <h2 class="d-flex justify-content-center mb-5" style="align-items:center"><i class="fas fa-location-arrow mr-4 d-none d-sm-block"></i>Lokalita</h2>
+                    <p class="price-text">
+                        <strong>Chrudim a okolí</strong> ( Pardubice, Hlinsko, Vysoké Mýto ). 
+                    </p>
+                    <div class="d-flex justify-content-center ml-4" style="align-items:center; font-size:17px">
+                        <a href="/applicants" class="btn-4 mt-5" style="font-weight: bold"><i class="fas fa-arrow-circle-down mr-2 spin"></i>Zajímá tě více?</a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- Contact section -->
-    <section id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 mb-3 mb-md-0">
-                    <div class="card box-shad cardcontacts py-4 h-100">
-                        <div class="card-body text-center">
-                            <h2 class="text-uppercase m-0">navštiv náš</h2>
-                            <hr class="my-4" />
-                            <div><img class="mr-3 shadow" src="images/fb.jpg" alt="fb" style="height: 30px; width: 30px"><a href="https://www.facebook.com/talking.sheep.english/" target="_blank" class="contactemail">facebook</a></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-3 mb-md-0">
-                    <div class="card box-shad cardcontacts py-4 h-100">
-                        <div class="card-body text-center">
-                            <h2 class="text-uppercase m-0">e-mail</h2>
-                            <hr class="my-4" />
-                            <div><a class="contactemail" href="#!">talking.sheep.english@gmail.com</a></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-3 mb-md-0">
-                    <div class="card box-shad cardcontacts py-4 h-100">
-                        <div class="card-body text-center">
-                            <h2 class="text-uppercase m-0">Telefon</h2>
-                            <hr class="my-4" />
-                            <div class="contactfont">(+420) 728 648 959</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>  
 @endsection
