@@ -2,7 +2,7 @@
 
 @section('content')
 <section id="administration">
-    <div class="container">
+    <div class="container mb-5">
     @include('inc.messages')  
         <h4 class="my-3">Seznam aktuálních studentů</h4>
         <table>
@@ -79,7 +79,6 @@
         <hr>
 
         <h4 class="my-3">Odevzdané úkoly</h4>
-        
         <table class="mb-3">
             <tr class="">
                 <th>ID studenta</th>
@@ -87,12 +86,14 @@
                 <th>Číslo úkolu</th>
                 <th>Soubor</th>
                 <th>Odevzdáno</th>
-                <th>Smazat</th>
                 <th>Stáhnout</th>
                 <th>Zkontrolováno</th>
+                <th>Vybrat</th>
             </tr>
             
                 @foreach( $homeworks as $homework )
+                {!! Form::open(['action' => ['App\Http\Controllers\HomeworksController@destroy'], 'method' => 'DELETE', 'onclick'=> 'alert("Opravdu smazat úkol/y? Akce je nenávratná")']) !!}
+                {{ csrf_field() }}
                 <tr id="" class="">
                     <td>{{ $homework->user_id }}</td>
                     <td>{{ $homework->name }}</td>
@@ -100,18 +101,27 @@
                     <td>{{ $homework->file}}</td>
                     <td>{{ $homework->created_at }}</td>
                     <td>
-                        {!! Form::open(['action' => ['App\Http\Controllers\HomeworksController@destroy', $homework->id], 'method' => 'DELETE', 'onclick'=> 'return confirm("Opravdu smazat úkol? Akce je nenávratná")']) !!}
-                        {{ Form::submit('X', ['class' => 'delete']) }}
-                        {!! Form::close() !!}
-                    </td>
-                    <td>
                         <a href="/storage/homework_upload/{{ $homework->file }}" class="download"> &#10149;</a>    
                     </td>
                     <td class="checked">{!! $homework->checked !!}</td>
+                    <td>{{ Form::checkbox('homeworks[]', $homework->id) }}</td>
                 </tr>
-                @endforeach       
+                @endforeach  
+                <tr style="background-color:#0000ff1a">
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><input type="checkbox" id="select-all" name="select-all"><label for="select-all" class="ml-3 mb-0">Vybrat vše</label></td>
+                    </tr>      
         </table>
-
+        <div class="mt-4 text-right">
+            {{ Form::submit('Smazat vybrané', ['class' => 'btn-4', 'style' => 'color:white']) }}
+        </div>   
+        {!! Form::close() !!} 
     <hr>    
 
         <h4 class="my-3">Správce registračních kódů</h4>

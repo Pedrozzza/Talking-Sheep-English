@@ -4,7 +4,7 @@
 <div class="container my-auto">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card box-shad">
+            <div class="card box-shad my-5">
                 <div class="card-header text-center font-weight-bold forms">PRO VSTUP DO UČEBNY JE NUTNÉ SE NEJDŘÍVE PŘIHLÁSIT</div>
 
                 <div class="card-body">

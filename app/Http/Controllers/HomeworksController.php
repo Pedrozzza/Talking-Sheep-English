@@ -9,17 +9,16 @@ use Illuminate\Support\Facades\Storage;
 class HomeworksController extends Controller
 {
     public function store(Request $request) {
-        
+
         //validace
         $this->validate($request, [
             'name' => 'required | max:255',
             'number' => 'required | numeric | max:255',
             'file' => 'required | file | max: 10000',
         ]);
-
         //ulozeni souboru do uloziste
         if($request->hasFile('file'))
-        { 
+        {
             $fileNameWithExt = $request->file('file')->getClientOriginalName();
             $fileName = pathinfo($fileNameWithExt, PATHINFO_FILENAME);
             $extension = $request->file('file')->getClientOriginalExtension();
@@ -41,12 +40,17 @@ class HomeworksController extends Controller
         return redirect('/submit')->with('success', 'Úkol úspěšne odeslán!');
     }
 
-    public function destroy($id) {
+    public function destroy(Request $request) {
 
-        $homework = Homework::find($id);
-        Storage::delete('public/homework_upload/' . $homework->file);
-        $homework->delete($id);
+        foreach(Homework::find($request->input('homeworks')) as $homework) {
 
-        return redirect('/administration')->with('success', 'Homework deleted!');
+            $homework->delete();
+        }
+
+        // $homework = Homework::find($id);
+        // Storage::delete('public/homework_upload/' . $homework->file);
+        // $homework->delete($id);
+
+        return redirect('/administration')->with('success', 'Úkol/y smazány');
     }
 }

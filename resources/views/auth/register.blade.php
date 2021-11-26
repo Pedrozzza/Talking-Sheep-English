@@ -4,7 +4,7 @@
 <div class="container my-auto">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card box-shad">
+            <div class="card box-shad my-5">
                 <div class="card-header text-center font-weight-bold forms">VSTUP DO UČEBNY PRO STUDENTY TALKING SHEEP ENGLISH</div>
 
                 <div class="card-body">

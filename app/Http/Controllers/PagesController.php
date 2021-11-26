@@ -32,4 +32,12 @@ class PagesController extends Controller
 
         return view('pages.applicants');
     }
+
+    public function info() {
+        return view('pages.info');
+    }
+
+    public function prices() {
+        return view('pages.prices');
+    }
 }

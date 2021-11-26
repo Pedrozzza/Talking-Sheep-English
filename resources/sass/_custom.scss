@@ -28,16 +28,26 @@ h1 {
 }
 
 h2 {
-    color: #cc0000;
+    color: #006cd2;
     font-weight: 700;
-    font-size: 2rem;
+    font-size: 25px;
     text-shadow: 2px 2px 4px #f4433636;
+
+    @media (min-width: 768px){
+        font-size: 2rem;
+    }
+
 }
 
 h3 {
-    color: #cc0000;
+    color: #006cd2;
     font-weight: 600;
+    font-size: 20px;
     text-shadow: 2px 2px 4px #f443363d;
+
+    @media (min-width: 768px){
+        font-size: 25px;
+    }
 }
 
 h4 {
@@ -223,7 +233,7 @@ h5 {
 
 .border-style {
     border-top-width: 6px;
-    border-top-color: #cc0000;
+    border-top-color: #0066cc;
 }
 
 .borderless td, .borderless th {
@@ -578,7 +588,7 @@ h5 {
     margin-top: 2rem;
     font-size: 2rem;
     font-weight: 900;
-    text-shadow: 1px 1px 0px #ac1818;
+    text-shadow: 1px 1px 0px #2196f3;
 
     @media (min-width: 1600px) {
         margin-top: 4rem;
@@ -601,7 +611,23 @@ h5 {
     border-radius: 50px;
     font-family: 'Poppins', sans-serif;
     font-weight: 800;
+}
 
+#cards {
+    padding-top: 1rem;
+    padding-bottom: 3rem;
+    background-image: linear-gradient(to bottom, #ffffff, #ffd5f552),url("../../storage/app/public/background/flag2.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @media (min-width: 768px) {
+        padding-top: 1.5rem;
+    }
+
+    @media (min-width: 1600px) {
+        padding-top: 3rem;
+    }
 }
 
 .shadow {
@@ -752,3 +778,102 @@ h5 {
   .footer-h3 {
       color: white;
   }
+
+  .cookie {
+      position: fixed;
+      bottom: -100px;
+      left: 0;
+      right: 0;
+      display:flex;
+      justify-content: center;
+      background-color: #cc0000;
+      color: white;
+      font-weight: bold;
+      padding: 0.5rem;
+      font-size: 12px;
+      transition: 400ms;
+      
+
+        @media (min-width: 768px) {
+            font-size: 12px;
+        }
+  }
+
+  .cookie.active {
+      bottom: 0;
+  }
+
+  .cookie a {
+      text-decoration: underline;
+  }
+
+  .btn-cookie {
+      border: 0;
+      background-color: white;
+      color:#cc0000;
+      border-radius: 30px;
+      font-weight: bold;
+      border-color: #cc0000;
+  }
+
+  .video {
+      width: 100%;
+
+      @media (min-width: 768px) {
+
+        width:500px;
+        height:320px;
+    }
+  }
+
+.slide1 {
+    animation: slideInFromLeft 1s ease-in;
+}
+
+.slide2 {
+    animation: slideInFromBottom 1s ease-in;
+}
+
+.slide3 {
+    animation: slideInFromRight 1s ease-in;
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-250%)
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(250%)
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes slideInFromBottom {
+    0% {
+        transform: translateY(250%)
+    }
+
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+.link {
+    color:#006cd2 !important;
+    font-weight: 900 !important;
+}
+
+.text {
+    font-weight:bold;
+    font-size: 1.1rem;
+}

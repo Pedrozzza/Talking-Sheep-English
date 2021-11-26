@@ -17,8 +17,8 @@
                     <div class="col-sm-6 col-md-3 item">
                         <h3 class="footer-h3">Menu</h3>
                         <ul>
-                            <li><a href="/#about">Informace</a></li>
-                            <li><a href="/#pricelist">Ceník</a></li>
+                            <li><a href="/info">Informace</a></li>
+                            <li><a href="/prices">Ceník</a></li>
                             <li><a href="/applicants">Pro zájemce</a></li>
                             <li><a href="/folders">Studovna</a></li>
                             <li><a href="/#contact">Kontakt</a></li>
@@ -34,4 +34,5 @@
                 <p class="copyright">Copyright © TalkingSheepEnglish {{ now()->year }}</p>
             </div>
         </footer>
+        @include('inc.cookies')
     </section>
