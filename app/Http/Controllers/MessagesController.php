@@ -15,14 +15,14 @@ use Illuminate\Support\Facades\Redirect;
 class MessagesController extends Controller
 {
     public function index($id) {
-        
+
         $user = User::find($id);
         return view('administration.message')->with('user', $user);
     }
 
     public function store(Request $request, $id) {
-        
-        
+
+
 
         //validace
         $this->validate($request, [
@@ -33,7 +33,7 @@ class MessagesController extends Controller
 
         //ulozeni souboru do uloziste
         if($request->hasFile('file_message'))
-        { 
+        {
             $fileNameWithExt = $request->file('file_message')->getClientOriginalName();
             $fileName = pathinfo($fileNameWithExt, PATHINFO_FILENAME);
             $extension = $request->file('file_message')->getClientOriginalExtension();
@@ -46,16 +46,16 @@ class MessagesController extends Controller
         //ulozeni souboru do databaze
         $message = new Message;
         $message->user_id = $id;
-        $message->notes = $request->input('notes');
+        $message->body = $request->input('body');
         $message->number = $request->input('number');
         $message->file = $fileNameToStore;
         $message->evaluation = $request->input('evaluation');
         $message->save();
 
         $user = User::find($id);
-        
+
         $homework = Homework::where('user_id', $user->id)->update(array('checked' => '&#9745;'));
-        
+
 
         Mail::to($user->email)->send(new MessageMail());
 
@@ -78,19 +78,19 @@ class MessagesController extends Controller
             'subject' => 'required | max:100',
             'body' => 'required',
             'users' => 'required',
-        ]);    
+        ]);
 
         //predmet zpravy
         $subject = $request->input('subject');
         //telo zpravy
-        $body =strip_tags($request->input('body'));       
+        $body =strip_tags($request->input('body'));
 
-        //pro kazdeho uzivatele 
+        //pro kazdeho uzivatele
         foreach(User::find($request->input('users')) as $user) {
-            
+
             //najdi email uzivatele
             $email = $user->email;
-        
+
             //posli email
             Mail::to($email)->send(new MassMessage($body, $subject));
         }

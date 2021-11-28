@@ -5,10 +5,10 @@
     <div class="container">
     @include('inc.messages')
     <h4 class="my-5">Hodnocení úloh</h4>
-        
-        
+
+
         <table class="mb-3">
-            <tr>            
+            <tr>
                 <th>Číslo úkolu</th>
                 <th>Poznámka</th>
                 <th>Hodnocení</th>
@@ -21,7 +21,7 @@
                 @foreach( $messages as $message )
                 <tr style="word-break:break-word;">
                     <td class="number">{{ $message->number }}</td>
-                    <td>{{ $message->notes }}</td>
+                    <td>{{ $message->body }}</td>
                     <td class="evaluation">{{ $message->evaluation }}</td>
                     <td>{{ $message->created_at }}</td>
                     <td>
@@ -32,15 +32,15 @@
                     <td>
                         @if( $message->file )
                             <a href="/storage/message_upload/{{ $message->file }}" class="download"> &#10149;</a>
-                        @endif   
+                        @endif
                     </td>
                 </tr>
                 @endforeach
             @else
-            <p>Žádné hodnocení úkolu zatím není k zobrazení</p>              
-            @endif 
+            <p>Žádné hodnocení úkolu zatím není k zobrazení</p>
+            @endif
         </table>
     </div>
-    
+
 @endsection
 
